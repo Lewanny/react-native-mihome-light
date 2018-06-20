@@ -6,6 +6,12 @@
 build/
 DerivedData/
 
+## react-native
+.DS_STORE  
+node_modules  
+*~  
+*.log*  
+
 ## Various settings
 *.pbxuser
 !default.pbxuser
