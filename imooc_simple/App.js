@@ -10,7 +10,7 @@ import React from 'react';
 const nativeImageSource = require('nativeImageSource');
 
 import {
-    NavigatorIOS, StyleSheet,
+    NavigatorIOS,
 } from 'react-native';
 
 class App extends React.Component {
@@ -24,8 +24,24 @@ class App extends React.Component {
 
     _onRightButtonPress() {
         this.refs.nav.push({
-            title: "From Right",
-            component: WZLightSettingClass
+            // title: "From Right",
+            component: WZLightSettingClass,
+
+            title: 'Device Setting',
+            barTintColor: '#FFFFFF',
+            titleTextColor: '#000000',
+            tintColor:  '#4B4B4B',
+            translucent: false, // 不透明
+
+            leftButtonIcon: nativeImageSource({
+                ios: 'wyzev2_light_return',
+                width: 44,
+                height: 44
+            }),
+            onLeftButtonPress:() => {this.refs.nav.pop()},
+
+
+            interactivePopGestureEnabled: false,
         })
     }
 
@@ -39,8 +55,8 @@ class App extends React.Component {
 
                               title: 'Wyze Smart Light',
                               barTintColor: '#212542',
-                              titleTextColor: '#ffffff80',
-                              tintColor:  '#ffffff47',
+                              titleTextColor: '#ffffffcc',
+                              tintColor:  '#ffffff78',
                               translucent: false, // 不透明
 
 

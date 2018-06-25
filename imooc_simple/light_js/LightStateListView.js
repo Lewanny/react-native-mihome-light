@@ -1,12 +1,14 @@
 /**
- * Copyright (c) 2015-present, Facebook, Inc.
+ * Copyright (c) 2018-present, HuaLaiKeJi, Inc.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
  * @flow
  */
+
 'use strict';
+import WZLightGlobal from "./WZLightGlobal";
 
 var React = require('react');
 var createReactClass = require('create-react-class');
@@ -43,8 +45,8 @@ var TITLES_URLS = [
     'Delay',
 ];
 
-var ListViewGridLayoutExample = createReactClass({
-    displayName: 'ListViewGridLayoutExample',
+var LightStateListView = createReactClass({
+    displayName: 'LightStateListView',
 
     statics: {
         title: '<ListView> - Grid Layout',
@@ -56,7 +58,21 @@ var ListViewGridLayoutExample = createReactClass({
         return {
             dataSource: ds.cloneWithRows(this._genRows({})),
         };
+        this.props._onLighStateButtonPress = this.props._onLighStateButtonPress.bind(this);
     },
+
+    // constructor() {
+    //     var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+    //     return {
+    //         dataSource: ds.cloneWithRows(this._genRows({})),
+    //     };
+    //
+    //     this._onButtonPress = this._onButtonPress.bind(this);
+    // },
+
+    // _onLighStateButtonPress(rowID){
+    //     console.log(rowID+'dianji anniu');
+    // },
 
     _pressData: ({}: {[key: number]: boolean}),
 
@@ -87,11 +103,11 @@ var ListViewGridLayoutExample = createReactClass({
         if (this.selIndex==rowID)  {
             imgSource = THUMB_SEL_URLS[rowID];
         }
-
-        console.log(rowData);
-        console.log(rowData.imageNor);
-        console.log(rowID);
-
+        //
+        // console.log(rowData);
+        // console.log(rowData.imageNor);
+        // console.log(rowID);
+        //
 
         return (
             <TouchableHighlight onPress={() => this._pressRow(rowID)} underlayColor="transparent">
@@ -109,7 +125,6 @@ var ListViewGridLayoutExample = createReactClass({
 
 
     _genRows: function(pressData: {[key: number]: boolean}): Array<string> {
-        console.log(pressData);
         var dataBlob = [
             {
                 title: 'Bright',
@@ -141,6 +156,8 @@ var ListViewGridLayoutExample = createReactClass({
             dataSource: this.state.dataSource.cloneWithRows(
                 this._genRows(this._pressData)
             )});
+
+        this.props._onLighStateButtonPress(rowID);
     },
 });
 
@@ -167,12 +184,8 @@ var styles = StyleSheet.create({
         margin: 3,
         width: 70,
         height: 110,
-        // backgroundColor: '#F6F6F6',
         backgroundColor: 'rgba(255, 255, 255, 0.0)',
         alignItems: 'center',
-        // borderWidth: 1,
-        // borderRadius: 5,
-        // borderColor: '#CCC'
     },
     thumb: {
         width: 64,
@@ -182,8 +195,8 @@ var styles = StyleSheet.create({
         flex: 1,
         marginTop: 13,
         // fontWeight: 'bold',
-        color: '#ffffff35',
+        color: '#ffffff5b',
     },
 });
 
-module.exports = ListViewGridLayoutExample;
+module.exports = LightStateListView;

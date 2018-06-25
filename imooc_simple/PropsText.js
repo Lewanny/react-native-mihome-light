@@ -25,7 +25,6 @@ export default class PropsText extends Component {
 
     }
 
-
     render() {
         return <View>
             <Text style={{fontSize: 20, backgroundColor: 'red', color: 'blue'}}>姓名：{this.props.name}</Text>

@@ -20,7 +20,7 @@ import { View,
 } from 'react-native';
 
 
-class WZLightSettingClass extends React.Component {
+class WZAddTimeSwitch extends React.Component {
     constructor() {
         super();
         // this._tipAlert = this._tipAlert.bind(this);
@@ -58,7 +58,26 @@ class WZLightSettingClass extends React.Component {
         this._onTimeSwitchItemPress();
         // Time Switch
         if (rowID==1) {
+            console.log('aaaaaaaaaaaa' + this.props.navigator);
+
             this._onTimeSwitchItemPress();
+            // this.props.navigator.push({
+            //     // title: "From Right",
+            //     component: WZTimeSwitchList,
+            //
+            //     title: 'Time Switch',
+            //     barTintColor: '#FFFFFF',
+            //     titleTextColor: '#000000',
+            //     tintColor:  '#4B4B4B',
+            //     translucent: false, // 不透明
+            //
+            //     leftButtonIcon: nativeImageSource({
+            //         ios: 'wyzev2_light_return',
+            //         width: 44,
+            //         height: 44
+            //     }),
+            //     onLeftButtonPress:() => {this.props.navigator.pop()},
+            // })
         }
 
         // 智能
@@ -126,5 +145,5 @@ const styles111 = StyleSheet.create({
     },
 })
 
-module.exports = WZLightSettingClass;
+module.exports = WZAddTimeSwitch;
 // export default ToDoEdit;
