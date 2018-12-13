@@ -59,7 +59,7 @@ typedef NS_ENUM(NSUInteger, KM_ArrangingType) {
 };
 
 typedef NS_ENUM(NSUInteger, KM_GroupType) {
-    KM_GroupTypeRecommend = 0,      //推荐号群
+    KM_GroupTypeRecommend = 0,      //推荐队列
     KM_GroupTypeMyArranging,        //我的排号
     KM_GroupTypeHistory,            //查看历史
 };
@@ -97,7 +97,7 @@ typedef NS_ENUM(NSUInteger, KMPackageStatus) {
     KMPackageStatusNotYet,              //已办理
 };
 
-//行业号群列表排序
+//行业队列列表排序
 typedef NS_ENUM(NSUInteger, KMCategorySortType) {
     KMCategorySortTypeNone = 0,     //没有排序
     KMCategorySortTypeNearToFar,    //由近到远

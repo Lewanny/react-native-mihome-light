@@ -122,7 +122,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>需要您的同意,才能访问相册,用于更换头像</string>
 	<key>NSRemindersUsageDescription</key>
-	<string>需要您的同意,才能访问提醒事项,用于号群提醒</string>
+	<string>需要您的同意,才能访问提醒事项,用于队列提醒</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

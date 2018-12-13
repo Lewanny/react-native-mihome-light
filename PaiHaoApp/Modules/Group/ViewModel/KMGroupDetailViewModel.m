@@ -13,7 +13,7 @@
 #pragma mark - BaseViewModelInterface
 -(void)km_bindNetWorkRequest{
     @weakify(self)
-    //请求号群详情
+    //请求队列详情
     _detailCommand    = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         @strongify(self)
         return [[[KM_NetworkApi groupDetailInfoWithID:self.groupID] doNext:^(id  _Nullable x) {
@@ -26,7 +26,7 @@
             [SVProgressHUD showErrorWithStatus:@"后台服务器错误" Duration:1];
         }];
     }];
-    //删除号群
+    //删除队列
     _deleGroupCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[[KM_NetworkApi deleGroupWithID:input] doNext:^(id  _Nullable x) {
             [SVProgressHUD showSuccessWithStatus:@"删除成功" Duration:1];

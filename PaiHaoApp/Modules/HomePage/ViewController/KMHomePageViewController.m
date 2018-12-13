@@ -19,7 +19,7 @@
 
 #import "KMGroupSearchVC.h"                 //搜索
 #import "KMQRScanVC.h"                      //扫描二维码
-#import "KMGroupQueueDetail.h"              //号群详情
+#import "KMGroupQueueDetail.h"              //队列详情
 
 #import "KMMyMessageVC.h"                   //我的消息
 
@@ -134,7 +134,7 @@
     background.backgroundColor                           = [UIColor whiteColor];
 
     UIImage *souImage                                    = [UIImage imageNamed:@"sousuo"];
-    NSString *souString                                  = @"关键字、号群名称/ID";
+    NSString *souString                                  = @"关键字、队列名称/ID";
 
     UIButton *btn                                        = [UIButton buttonWithType:UIButtonTypeCustom];
     //设置按钮图片
@@ -218,7 +218,7 @@
     vc.queueID                                           = queueID;
     [self.navigationController cyl_pushViewController:vc animated:YES];
 }
-//号群搜索
+//队列搜索
 -(void)pushGroupSearch{
     KMGroupSearchVC *vc                                  = [[KMGroupSearchVC alloc]init];
     [self.navigationController cyl_pushViewController:vc animated:YES];

@@ -19,7 +19,7 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 
-/** 添加号群 */
+/** 添加队列 */
 @property (nonatomic, strong) UIButton * addBtn;
 /** 商家服务 */
 @property (nonatomic, strong) UIButton * serviceBtn;
@@ -40,10 +40,10 @@
 }
 
 #pragma mark - Push
-/** 跳转 新建号群 */
+/** 跳转 新建队列 */
 -(void)pushNewGroupVC{
     KMNewGroupController * vc               = [[KMNewGroupController alloc]init];
-    vc.titleStr                             = @"新建号群";
+    vc.titleStr                             = @"新建队列";
     [self.navigationController cyl_pushViewController:vc animated:YES];
 }
 
@@ -152,7 +152,7 @@
 }
 #pragma mark - KMBaseViewControllerDataSource
 -(NSMutableAttributedString *)setTitle{
-    return [[NSMutableAttributedString alloc]initWithString:@"我的号群"
+    return [[NSMutableAttributedString alloc]initWithString:@"我的队列"
                                                  attributes:kNavTitleAttributes];
 }
 

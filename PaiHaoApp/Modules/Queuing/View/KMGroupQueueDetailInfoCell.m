@@ -115,7 +115,7 @@
     _comboRightLbl.textColor              = kFontColorGray;
     _comboRightLbl.font                   = kFont22;
     _comboRightLbl.numberOfLines          = 0;
-    [_comboRightLbl setText:@"您可以选择多个号群组成的套餐,一次排号,自动优先到最快的号群。"];
+    [_comboRightLbl setText:@"您可以选择多个队列组成的套餐,一次排号,自动优先到最快的队列。"];
     [_comboContent addSubview:_comboRightLbl];
     //底部分割线
     _comboLine                            = [UIView new];
@@ -241,15 +241,15 @@
 -(void)km_bindData:(id)data{
     if ([data isKindOfClass:[KMGroupBaseInfo class]]) {
         KMGroupBaseInfo *info             = data;
-        //号群图片
+        //队列图片
         [_iconImg setImageWithURL:[NSURL URLWithString:ImageFullUrlWithUrl(info.groupphoto ? info.groupphoto : @"")] placeholder:GetNormalPlaceholderImage];
-        //号群名称
+        //队列名称
         [_nameLbl setText:info.groupname];
-        //号群ID
+        //队列ID
         [_IDLbl setText:NSStringFormat(@"ID:%@",info.groupno)];
         //时间段
         [_timeLbl setText:info.timespan];
-        //号群地址
+        //队列地址
         [_addressLbl setText:info.groupaddr];
         
         //计算距离
@@ -286,10 +286,10 @@
             [_comboLeftLbl setBackgroundColor:info.alreadyQueue?kFontColorGray:kMainThemeColor];
         }
         
-        //判断号群解散
+        //判断队列解散
         if (info.groupstatus == 1) {
-            //号群已解散
-            [_queueNowBtn setTitle:@"号群已解散" forState:UIControlStateDisabled];
+            //队列已解散
+            [_queueNowBtn setTitle:@"队列已解散" forState:UIControlStateDisabled];
             _queueNowBtn.enabled = NO;
         }
         

@@ -9,9 +9,9 @@
 #import "KMBaseViewController.h"
 #import "KMGroupDetailInfo.h"
 @interface KMGroupCallController : KMBaseViewController
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
-/** 号群详情 */
+/** 队列详情 */
 @property (nonatomic, strong) KMGroupDetailInfo * detailInfo;
 /** 批量叫号人数 */
 @property (nonatomic, assign) NSInteger singleNumber;

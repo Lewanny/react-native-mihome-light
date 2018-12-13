@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-/** 号群列表 */
+/** 队列列表 */
 
 @interface KMGroupBriefModel : NSObject
 /** 前面等待人数 */
 @property (nonatomic, assign) NSInteger waitcount;
-/** 号群ID（数据标识） */
+/** 队列ID（数据标识） */
 @property (nonatomic, copy) NSString *ID;
 /** 开始排队时间 */
 @property (nonatomic, copy) NSString *startwaittime;
-/** 号群图片 */
+/** 队列图片 */
 @property (nonatomic, copy) NSString *groupphoto;
 /** 查询ID （类似于标签，关键字等） */
 @property (nonatomic, copy) NSString *groupno;

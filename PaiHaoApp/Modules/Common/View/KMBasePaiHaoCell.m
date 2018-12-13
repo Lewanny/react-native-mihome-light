@@ -10,13 +10,13 @@
 
 @interface KMBasePaiHaoCell ()
 
-/** 号群图片 */
+/** 队列图片 */
 @property (strong, nonatomic) UIImageView *iconImageView;
-/** 号群名称 */
+/** 队列名称 */
 @property (strong, nonatomic) UILabel *nameLabel;
-/** 号群距离 */
+/** 队列距离 */
 @property (strong, nonatomic) UILabel *distanceLabel;
-/** 号群ID */
+/** 队列ID */
 @property (strong, nonatomic) UILabel *IDLabel;
 /** 排号时间 */
 @property (strong, nonatomic) UILabel *timeLabel;
@@ -243,7 +243,7 @@
         [_statusLabel setText:NSStringFormat(@"我的号位%@号，当前办理%@号",info.currentno,info.currenthandle)];
     }else{
 //        [_nameLabel setText:@"时代城四季椰子鸡"];
-//        [_iconImageView setImage:[UIImage imageNamed:@"20搜索号群图片_03"]];
+//        [_iconImageView setImage:[UIImage imageNamed:@"20搜索队列图片_03"]];
 //        [_distanceLabel setText:@"1.9km"];
 //        [_timeLabel setText:@"9:00-18:00"];
 //        [_IDLabel setText:@"ID:9998"];

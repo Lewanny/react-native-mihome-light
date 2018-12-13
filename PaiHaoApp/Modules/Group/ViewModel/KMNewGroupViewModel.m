@@ -27,7 +27,7 @@
 #pragma mark - BaseViewModelInterface
 -(void)km_bindNetWorkRequest{
     @weakify(self)
-    //加载原来的号群信息
+    //加载原来的队列信息
     _infoCommand                                 = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[[KM_NetworkApi originalGroupInfoWithID:input] doNext:^(id  _Nullable x) {
             @strongify(self)
@@ -41,7 +41,7 @@
             [SVProgressHUD showErrorWithStatus:@"后台服务器错误" Duration:1];
         }];
     }];
-    //提交新号群
+    //提交新队列
     _addNewCommand                               = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
        @strongify(self)
     NSDictionary *params                         = [self.groupNew modelToJSONObject];
@@ -51,7 +51,7 @@
             [SVProgressHUD showErrorWithStatus:@"提交失败" Duration:1];
         }];
     }];
-    //编辑号群
+    //编辑队列
     _editGroupCommand                            = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         @strongify(self)
     NSDictionary *params                         = [self.origin modelToJSONObject];
@@ -105,7 +105,7 @@
     }];
 }
 
-#pragma mark - 编辑号群数据
+#pragma mark - 编辑队列数据
 /** 点击编辑 */
 -(void)didSelectIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
@@ -121,7 +121,7 @@
 //        case 5://编辑开始、结束时间
 //            [self editStartEndTime];
 //            break;
-        case 11://编辑 号群图片
+        case 11://编辑 队列图片
             [self editPhoto];
             break;
         case 12://编辑 简介
@@ -141,7 +141,7 @@
     }
 
 
-    //编辑号群
+    //编辑队列
     if (![self isNewBuiltGroup]) {
         switch (indexPath.row) {
             case 0://名称
@@ -186,7 +186,7 @@
                 break;
         }
     }else{
-    //新建号群
+    //新建队列
         switch (indexPath.row) {
             case 0://名称
     _groupNew.groupName                          = data;
@@ -427,9 +427,9 @@
 -(NSString *)rightTextWithIndexPath:(NSIndexPath *)indexPath{
 
     NSString *text = @"";
-    //修改号群
+    //修改队列
     if (![self isNewBuiltGroup]) {
-        //修改号群 赋值
+        //修改队列 赋值
         switch (indexPath.row) {
             case 0://名称
                 text = _origin.groupName;
@@ -469,7 +469,7 @@
         }
         return text;
     }
-    //新建号群 赋值
+    //新建队列 赋值
     switch (indexPath.row) {
         case 0://名称
             text = _groupNew.groupName;
@@ -512,7 +512,7 @@
 
 -(BOOL)switchValueWithIndexPath:(NSIndexPath *)indexPath{
     BOOL ret                                     = NO;
-    //号群编辑
+    //队列编辑
     if (![self isNewBuiltGroup]) {
         switch (indexPath.row) {
             case 8:
@@ -529,7 +529,7 @@
         }
         return ret;
     }
-    //新建号群
+    //新建队列
     switch (indexPath.row) {
         case 8:
     ret                                          = _groupNew.isAllowRemote == 0 ? YES : NO;
@@ -592,7 +592,7 @@
 }
 
 -(NSArray *)leftTextArr{
-    return @[@"号群名称",
+    return @[@"队列名称",
              @"区域",
              @"详细地址",
              @"行业类别",
@@ -607,7 +607,7 @@
              @"简介"];
 }
 -(NSArray *)placeHolderArr{
-    return @[@"请输入号群名称",
+    return @[@"请输入队列名称",
              @"请选择区域",
              @"请输入详细地址",
              @"行业类别",
@@ -640,15 +640,15 @@
     ret                                          = NO;
     alertText                                    = @"没有定位到您的位置,请在设置中开启应用定位权限";
     }
-    //号群名称
+    //队列名称
     if (ret && _groupNew.groupName.length == 0) {
     ret                                          = NO;
-    alertText                                    = @"请填写号群名称";
+    alertText                                    = @"请填写队列名称";
     }
-    //号群区域
+    //队列区域
     if (ret && !_groupNew.groupProvince.length) {
     ret                                          = NO;
-    alertText                                    = @"请选择号群区域";
+    alertText                                    = @"请选择队列区域";
     }
     //详细地址
     if (ret && !_groupNew.groupAddress.length) {
@@ -675,15 +675,15 @@
     ret                                          = NO;
     alertText                                    = @"请填写关键字";
     }
-    //号群图片
+    //队列图片
     if (ret && !_groupNew.photo.length) {
     ret                                          = NO;
-    alertText                                    = @"请上传号群图片";
+    alertText                                    = @"请上传队列图片";
     }
     //简介
     if (ret && !_groupNew.introduction.length) {
     ret                                          = NO;
-    alertText                                    = @"请填写号群简介";
+    alertText                                    = @"请填写队列简介";
     }
     if (!ret && alertText) {
         [SVProgressHUD showInfoWithStatus:alertText Duration:1];
@@ -694,15 +694,15 @@
 -(BOOL)verifyEditGroupParams{
     BOOL ret                                     = YES;
     NSString *alertText                          = nil;
-    //号群名称
+    //队列名称
     if (ret && _origin.groupName.length == 0) {
     ret                                          = NO;
-    alertText                                    = @"请填写号群名称";
+    alertText                                    = @"请填写队列名称";
     }
-    //号群区域
+    //队列区域
     if (ret && !_origin.groupProvince.length) {
     ret                                          = NO;
-    alertText                                    = @"请选择号群区域";
+    alertText                                    = @"请选择队列区域";
     }
     //详细地址
     if (ret && !_origin.groupAddress.length) {
@@ -724,15 +724,15 @@
     ret                                          = NO;
     alertText                                    = @"请填写关键字";
     }
-    //号群图片
+    //队列图片
     if (ret && !_origin.photo.length) {
     ret                                          = NO;
-    alertText                                    = @"请上传号群图片";
+    alertText                                    = @"请上传队列图片";
     }
     //简介
     if (ret && !_origin.introduction.length) {
     ret                                          = NO;
-    alertText                                    = @"请填写号群简介";
+    alertText                                    = @"请填写队列简介";
     }
     if (!ret && alertText) {
         [SVProgressHUD showInfoWithStatus:alertText Duration:1];
@@ -740,7 +740,7 @@
     return ret;
 }
 
-/** 判断是否新建号群 */
+/** 判断是否新建队列 */
 -(BOOL)isNewBuiltGroup{
     return _groupID.length == 0;
 }

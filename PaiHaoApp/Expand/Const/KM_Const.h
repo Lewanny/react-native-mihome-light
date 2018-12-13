@@ -105,7 +105,7 @@ static NSString * const kErrStatus = @"errstatus";
 /** 保存行业分类信息 Key */
 static NSString * const kCategoryType = @"categoryType";
 
-/** 查找号群 key */
+/** 查找队列 key */
 static NSString * const kKeyword = @"keyword";
 static NSString * const kProv = @"prov";
 static NSString * const kCity = @"city";
@@ -117,7 +117,7 @@ static NSString * const kTickets = @"tickets";
 
 /** 套餐ID */
 static NSString * const kPackageID = @"packageId";
-/** 号群ID */
+/** 队列ID */
 static NSString * const kGroupId = @"groupId";
 
 /** 排号ID */
@@ -133,11 +133,11 @@ static NSString * const kHistory = @"history";
 static NSString * const kCurrentqueueid = @"currentqueueid";
 static NSString * const kWorkerId = @"workerId";
 
-/** 号群时间 */
+/** 队列时间 */
 static NSString * const kStartWaitTime = @"startWaitTime";
 static NSString * const kEndWaitTime = @"endWaitTime";
 
-/** 号群排队信息 */
+/** 队列排队信息 */
 static NSString * const kSingleNumber = @"singleNumber";
 static NSString * const kWindowId = @"windowId";
 

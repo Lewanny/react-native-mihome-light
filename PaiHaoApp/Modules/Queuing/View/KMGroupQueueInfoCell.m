@@ -10,13 +10,13 @@
 #import "KMGroupBaseInfo.h"
 
 @interface KMGroupQueueInfoCell ()
-/** 号群图片 */
+/** 队列图片 */
 @property (nonatomic, strong) UIImageView * iconImg;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, strong) UILabel * nameLbl;
 /** 距离 */
 @property (nonatomic, strong) UILabel * distanceLbl;
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, strong) UILabel * IDLbl;
 /** 时间段 */
 @property (nonatomic, strong) UILabel * timeLbl;
@@ -38,10 +38,10 @@
 #pragma mark - BaseViewInterface
 -(void)km_addSubviews{
     UIView *contentView        = self.contentView;
-    //号群图片
+    //队列图片
     _iconImg                   = [UIImageView new];
     [contentView addSubview:_iconImg];
-    //号群名称
+    //队列名称
     _nameLbl                   = [UILabel new];
     _nameLbl.font              = kFont30;
     _nameLbl.textColor         = kFontColorDark;
@@ -83,14 +83,14 @@
 
 -(void)km_setupSubviewsLayout{
     UIView *contentView = self.contentView;
-    //号群图片
+    //队列图片
     [_iconImg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(contentView).offset(AdaptedWidth(24));
         make.top.mas_equalTo(contentView).offset(AdaptedHeight(20));
         make.width.mas_equalTo(AdaptedWidth(174));
         make.height.mas_equalTo(AdaptedHeight(174));
     }];
-    //号群名称
+    //队列名称
     [_nameLbl mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(_iconImg.mas_right).offset(AdaptedWidth(20));
         make.top.mas_equalTo(_iconImg.mas_top);
@@ -154,15 +154,15 @@
 -(void)km_bindData:(id)data{
     if ([data isKindOfClass:[KMGroupBaseInfo class]]) {
         KMGroupBaseInfo *info = data;
-        //号群图片
+        //队列图片
         [_iconImg setImageWithURL:[NSURL URLWithString:ImageFullUrlWithUrl(info.groupphoto ? info.groupphoto : @"")] placeholder:GetNormalPlaceholderImage];
-        //号群名称
+        //队列名称
         [_nameLbl setText:info.groupname];
-        //号群ID
+        //队列ID
         [_IDLbl setText:NSStringFormat(@"ID:%@",info.groupno)];
         //时间段
         [_timeLbl setText:info.timespan];
-        //号群地址
+        //队列地址
         [_addressLbl setText:info.groupaddr];
         
         //计算距离

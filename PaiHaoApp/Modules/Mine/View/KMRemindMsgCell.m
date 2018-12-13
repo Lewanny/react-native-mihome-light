@@ -148,7 +148,7 @@
             [attr setColor:kFontColorDark];
             
             //2
-            NSMutableAttributedString *attr1 = [[NSMutableAttributedString alloc]initWithString:@"很抱歉，您参与排号的号群"];
+            NSMutableAttributedString *attr1 = [[NSMutableAttributedString alloc]initWithString:@"很抱歉，您参与排号的队列"];
             [attr1 setFont:kFont28];
             [attr1 setColor:kFontColorDarkGray];
             [attr appendAttributedString:attr1];

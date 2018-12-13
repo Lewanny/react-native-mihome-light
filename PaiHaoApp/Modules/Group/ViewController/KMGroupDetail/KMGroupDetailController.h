@@ -9,7 +9,7 @@
 #import "KMBaseViewController.h"
 
 @interface KMGroupDetailController : KMBaseViewController
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
 /** 批量人数 0就是单人模式 */
 @property (nonatomic, assign) NSInteger  singlenumber;

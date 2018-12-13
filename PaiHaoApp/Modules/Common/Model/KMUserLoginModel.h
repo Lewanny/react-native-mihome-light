@@ -15,7 +15,7 @@
 @property (nonatomic, copy) NSString * customerType;
 /** 父级用户userid */
 @property (nonatomic, copy) NSString * pid;
-/** 角色码（0，默认管理员（号群管理员），1，呼叫员（由于管理员添加，只有呼叫权限）） */
+/** 角色码（0，默认管理员（队列管理员），1，呼叫员（由于管理员添加，只有呼叫权限）） */
 @property (nonatomic, copy) NSString * rolecode;
 /** 信用值 */
 @property (nonatomic, copy) NSString * creditscore;

@@ -73,7 +73,7 @@
                                                  CYLTabBarItemSelectedImage : @"Bottom-Icona",
                                                  };
     NSDictionary *secondTabBarItemsAttributes          = @{
-                                                  CYLTabBarItemTitle : @"号群",
+                                                  CYLTabBarItemTitle : @"队列",
                                                   CYLTabBarItemImage : @"Bottom-Iconb1",
                                                   CYLTabBarItemSelectedImage : @"Bottom-Iconb",
                                                   };

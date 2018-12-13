@@ -13,17 +13,17 @@
 @property (nonatomic, copy) NSString *timespan;
 /** 前面人数 */
 @property (nonatomic, copy) NSString *frontnumber;
-/** 号群ID（数据标识） */
+/** 队列ID（数据标识） */
 @property (nonatomic, copy) NSString *groupid;
-/** 号群图片路径 */
+/** 队列图片路径 */
 @property (nonatomic, copy) NSString *groupphoto;
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString *groupno;
 /** 等待时间 */
 @property (nonatomic, copy) NSString *waittime;
-/** 号群地址 */
+/** 队列地址 */
 @property (nonatomic, copy) NSString *groupaddr;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString *groupname;
 /** 纬度 */
 @property (nonatomic, copy) NSString *lat;
@@ -39,7 +39,7 @@
 /** 远程排队 */
 @property (nonatomic, assign) NSInteger  isallowremote;
 
-/** 号群状态为1时，号群为解散状态。当前不可排队 */
+/** 队列状态为1时，队列为解散状态。当前不可排队 */
 @property (nonatomic, assign) NSInteger  groupstatus;
 
 

@@ -70,7 +70,7 @@
 /** 退出登录 */
 +(void)logout;
 
-/** 跳转号群详情 */
+/** 跳转队列详情 */
 +(void)pushDetailWithGroupID:(NSString *)groupID;
 
 /** 跳转二维码 */

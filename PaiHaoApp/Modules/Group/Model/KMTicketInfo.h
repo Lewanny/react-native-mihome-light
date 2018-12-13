@@ -11,7 +11,7 @@
 @interface KMTicketInfo : NSObject
 /** 窗口号 */
 @property (nonatomic, copy) NSString *windows;
-/** 号群名称 业务名称 */
+/** 队列名称 业务名称 */
 @property (nonatomic, copy) NSString *groupname;
 /** 商户名称 */
 @property (nonatomic, copy) NSString *businessname;

@@ -53,7 +53,7 @@
     [self.navigationController cyl_pushViewController:detail animated:YES];
 }
 
-//号群详情 已排队
+//队列详情 已排队
 -(void)pushMineQueueInfoWithGroupID:(NSString *)groupID QueueID:(NSString *)queueID{
     KMGroupQueueInfoVC *vc        = [[KMGroupQueueInfoVC alloc]init];
     vc.groupID                    = groupID;

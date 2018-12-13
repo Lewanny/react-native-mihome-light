@@ -27,7 +27,7 @@
     }] array];
 
     if (arr.count == 0) {
-        [SVProgressHUD showInfoWithStatus:@"请至少选择一个号群" Duration:1];
+        [SVProgressHUD showInfoWithStatus:@"请至少选择一个队列" Duration:1];
         return NO;
     }
 
@@ -75,7 +75,7 @@
     }] array];
 
     if (arr.count == 0) {
-        [SVProgressHUD showInfoWithStatus:@"请至少选择一个号群" Duration:1];
+        [SVProgressHUD showInfoWithStatus:@"请至少选择一个队列" Duration:1];
         return NO;
     }
 
@@ -122,7 +122,7 @@
             [SVProgressHUD showErrorWithStatus:@"后台服务器错误" Duration:1];
         }];
     }];
-    //号群列表
+    //队列列表
     _groupListCommand       = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[[KM_NetworkApi userGroupInfo] doNext:^(id  _Nullable x) {
             @strongify(self)

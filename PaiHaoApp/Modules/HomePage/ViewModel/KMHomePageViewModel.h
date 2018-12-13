@@ -28,7 +28,7 @@
 
 /** 获取未读消息数量 */
 @property (nonatomic, strong) RACCommand * messagesNumberCommand;
-/** 号群列表数据 */
+/** 队列列表数据 */
 -(NSArray *)groupArr;
 
 @end

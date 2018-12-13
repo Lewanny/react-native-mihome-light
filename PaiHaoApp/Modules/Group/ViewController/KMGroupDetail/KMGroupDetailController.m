@@ -68,7 +68,7 @@
 -(void)pushEditVC{
     KMNewGroupController *vc                = [[KMNewGroupController alloc]init];
     vc.groupID                              = self.groupID;
-    vc.titleStr                             = @"编辑号群";
+    vc.titleStr                             = @"编辑队列";
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -97,10 +97,10 @@
 
     self.navigationItem.rightBarButtonItems = @[spaceItem, item1, item2];
 }
-/** 删除号群 */
+/** 删除队列 */
 -(void)deleGroup{
     @weakify(self)
-    [LBXAlertAction showAlertWithTitle:@"提示" msg:@"确认删除此号群？" buttonsStatement:@[@"取消", @"确认"] chooseBlock:^(NSInteger buttonIdx) {
+    [LBXAlertAction showAlertWithTitle:@"提示" msg:@"确认删除此队列？" buttonsStatement:@[@"取消", @"确认"] chooseBlock:^(NSInteger buttonIdx) {
         if (buttonIdx == 1) {
             @strongify(self)
             [[self.viewModel.deleGroupCommand execute:self.groupID] subscribeNext:^(id  _Nullable x) {
@@ -110,7 +110,7 @@
         }
     }];
 }
-/** 编辑号群 */
+/** 编辑队列 */
 -(void)editGroup{
     [self pushEditVC];
 }
@@ -179,7 +179,7 @@
 
 #pragma mark - KMBaseViewControllerDataSource -
 -(NSMutableAttributedString *)setTitle{
-    return KMBaseNavTitle(@"号群详情");
+    return KMBaseNavTitle(@"队列详情");
 }
 
 #pragma mark - BaseViewControllerInterface

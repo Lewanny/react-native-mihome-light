@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface KMOriginalGroupInfo : NSObject
-/** 号群有效期开始时间（日期+开始时间） */
+/** 队列有效期开始时间（日期+开始时间） */
 @property (nonatomic, copy) NSString *startWaitTime;
 /** 是否允许远程排队（0允许，1不允许，默认0） */
 @property (nonatomic, assign) NSInteger isAllowRemote;
@@ -21,7 +21,7 @@
 //@property (nonatomic, copy) NSString *numberhead;
 
 //@property (nonatomic, copy) NSString *remark;
-/** 号群地址，应包括省市县/区及详细地址街道楼栋门牌号等尽量详细。 */
+/** 队列地址，应包括省市县/区及详细地址街道楼栋门牌号等尽量详细。 */
 @property (nonatomic, copy) NSString *groupAddress;
 
 @property (nonatomic, copy) NSString *industrytype;
@@ -95,7 +95,7 @@
 @property (nonatomic, copy) NSString *Id;
 /** 联系电话 */
 @property (nonatomic, copy) NSString *phone;
-/** 号群有效期结束时间（日期+结束时间） */
+/** 队列有效期结束时间（日期+结束时间） */
 @property (nonatomic, copy) NSString *endWaitTime;
 
 //@property (nonatomic, assign) NSInteger expirecount;

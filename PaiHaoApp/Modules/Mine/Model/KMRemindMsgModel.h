@@ -23,7 +23,7 @@
 @property (nonatomic, copy) NSString *queueNo;
 /** 窗口信息 */
 @property (nonatomic, copy) NSString *windowName;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString *groupName;
 /** 创建时间(消息发送时间) */
 @property (nonatomic, copy) NSString *CreateTime;

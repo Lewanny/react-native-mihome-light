@@ -21,7 +21,7 @@
 
 @implementation KMHomePageViewModel
 
-/** 号群列表数据 */
+/** 队列列表数据 */
 -(NSArray *)groupArr{
     switch (self.groupType) {
         case KM_GroupTypeRecommend:

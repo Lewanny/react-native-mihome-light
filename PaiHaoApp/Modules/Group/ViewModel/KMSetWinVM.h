@@ -21,7 +21,7 @@
 
 /** 加载当前用户名下未分配的窗口  窗口分配列表 */
 @property (nonatomic, strong) RACCommand * unabsorbedWin;
-/** 获取当前号群已经绑定的窗口列表 窗口解绑列表 */
+/** 获取当前队列已经绑定的窗口列表 窗口解绑列表 */
 @property (nonatomic, strong) RACCommand * bindedWin;
 
 /** 提交 */

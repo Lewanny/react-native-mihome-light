@@ -11,13 +11,13 @@
 @interface KMQueueInfo : NSObject
 /** 你的号码 */
 @property (nonatomic, copy) NSString *currentno;
-/** 号群ID（数据标识） */
+/** 队列ID（数据标识） */
 @property (nonatomic, copy) NSString *groupid;
 /** 等待人数 */
 @property (nonatomic, assign) NSInteger waitcount;
-/** 号群图片 */
+/** 队列图片 */
 @property (nonatomic, copy) NSString *groupphoto;
-/** 号群ID（编号） */
+/** 队列ID（编号） */
 @property (nonatomic, copy) NSString *groupno;
 /** 当前办理编号 */
 @property (nonatomic, copy) NSString *currenthandle;
@@ -25,7 +25,7 @@
 @property (nonatomic, copy) NSString *queueid;
 /** 纬度 */
 @property (nonatomic, copy) NSString *lat;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString *groupname;
 /** 经度 */
 @property (nonatomic, copy) NSString *lng;

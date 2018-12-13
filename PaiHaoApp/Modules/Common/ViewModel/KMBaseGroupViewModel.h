@@ -11,9 +11,9 @@
 
 
 @interface KMBaseGroupViewModel : KMBaseViewModel
-/** 号群分类 */
+/** 队列分类 */
 @property (nonatomic, assign) KM_GroupType  groupType;
-/** 号群列表 */
+/** 队列列表 */
 @property (nonatomic, strong) NSMutableArray * groupList;
 
 @property (nonatomic, strong) RACCommand *loadListDataCommand;

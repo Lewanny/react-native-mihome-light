@@ -14,7 +14,7 @@
 
 /** 数据源 */
 @property (nonatomic, strong) NSMutableArray * groupList;
-/** 行业类型 号群 */
+/** 行业类型 队列 */
 @property (nonatomic, strong) RACCommand * requestCategoryList;
 
 @property (nonatomic, assign) KMCategorySortType  sortType;

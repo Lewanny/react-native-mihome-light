@@ -13,8 +13,8 @@
 #import <ActionSheetPicker_3_0/ActionSheetStringPicker.h>
 #import "KMCategorySortView.h"//筛选
 
-#import "KMGroupQueueDetail.h"//号群排队 其他入口
-#import "KMGroupQueueInfoVC.h"//号群排队 我的排号入口
+#import "KMGroupQueueDetail.h"//队列排队 其他入口
+#import "KMGroupQueueInfoVC.h"//队列排队 我的排号入口
 @interface KMCategoryGroupController ()<UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -81,7 +81,7 @@
     detail.groupID                   = groupID;
     [self.navigationController cyl_pushViewController:detail animated:YES];
 }
-//号群详情 已排队
+//队列详情 已排队
 -(void)pushMineQueueInfoWithGroupID:(NSString *)groupID QueueID:(NSString *)queueID{
     KMGroupQueueInfoVC *vc           = [[KMGroupQueueInfoVC alloc]init];
     vc.groupID                       = groupID;

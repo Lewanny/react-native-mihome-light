@@ -7,7 +7,7 @@
 //
 
 #import "KMBaseViewController.h"
-/** 号群基本列表 */
+/** 队列基本列表 */
 @interface KMBaseGroupController : KMBaseViewController
 
 @property (nonatomic, assign) KM_GroupType  groupType;

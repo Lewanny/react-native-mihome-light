@@ -7,9 +7,9 @@
 //
 
 #import "KMBaseViewController.h"
-/** 号群详情 其他入口*/
+/** 队列详情 其他入口*/
 @interface KMGroupQueueDetail : KMBaseViewController
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
 
 @end

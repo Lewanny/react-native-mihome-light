@@ -9,7 +9,7 @@
 #import "KMBaseViewModel.h"
 
 @interface KMPackageStatusInfo : NSObject
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString *groupName;
 /** 状态 */
 @property (nonatomic, assign) NSInteger status;

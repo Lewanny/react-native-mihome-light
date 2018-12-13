@@ -15,17 +15,17 @@
 @property (nonatomic, copy) NSString *queuingtime;
 /** 等待时间 */
 @property (nonatomic, copy) NSString *waitingtime;
-/** 号群地址 */
+/** 队列地址 */
 @property (nonatomic, copy) NSString *groupaddress;
 /** 等待人数 */
 @property (nonatomic, copy) NSString *waitingcount;
-/** 号群编号（ID） */
+/** 队列编号（ID） */
 @property (nonatomic, copy) NSString *groupno;
 /** 商户简介 */
 @property (nonatomic, copy) NSString *synopsis;
 /** 图片 */
 @property (nonatomic, copy) NSString *photo;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString *groupname;
 /** 排队总人数 */
 @property (nonatomic, copy) NSString *currentcount;

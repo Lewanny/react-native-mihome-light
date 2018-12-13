@@ -10,7 +10,7 @@
 
 @interface KMHomePagePaiHaoHeader : KMBaseCollectionReusableView
 
-/** 推荐号群 */
+/** 推荐队列 */
 @property (strong, nonatomic) IBOutlet UIButton *recommendBtn;
 /** 我的排号 */
 @property (strong, nonatomic) IBOutlet UIButton *mineBtn;

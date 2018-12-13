@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, QueueReloadStatus) {
 //语音合成单例
 @property (nonatomic, strong) IFlySpeechSynthesizer *iFlySpeechSynthesizer;
 
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
 /** 批量叫号人数 */
 @property (nonatomic, assign) NSInteger singleNumber;
@@ -46,11 +46,11 @@ typedef NS_ENUM(NSUInteger, QueueReloadStatus) {
 @property (nonatomic, copy) NSString * currentHandle;
 
 
-/** 号群详情 */
+/** 队列详情 */
 @property (nonatomic, strong) KMGroupDetailInfo * detailInfo;
 /** 数据源 */
 @property (nonatomic, strong) NSMutableArray * queueArr;
-/** 该号群已绑定的窗口 */
+/** 该队列已绑定的窗口 */
 @property (nonatomic, strong) NSMutableArray * bindedWinArr;
 /** 刷新数据 */
 //@property (nonatomic, strong) RACSubject * refreshSubject;
@@ -60,9 +60,9 @@ typedef NS_ENUM(NSUInteger, QueueReloadStatus) {
 @property (nonatomic, strong) RACCommand * bindCallWindow;
 /** 获取已绑定的窗口 */
 @property (nonatomic, strong) RACCommand * bindedWinCommand;
-/** 请求号群详情 */
+/** 请求队列详情 */
 @property (nonatomic, strong) RACCommand * detailCommand;
-/** 获取号群排队信息 */
+/** 获取队列排队信息 */
 @property (nonatomic, strong) RACCommand * requestQueueData;
 /** 过号 */
 @property (nonatomic, strong) RACCommand * expireCommand;

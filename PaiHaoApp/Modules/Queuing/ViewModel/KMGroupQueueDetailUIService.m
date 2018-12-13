@@ -48,12 +48,12 @@
 }
 
 /**
- 号群信息 Cell
+ 队列信息 Cell
 
  @return KMGroupQueueDetailInfoCell
  */
 -(UITableViewCell *)cellForGroupInfo{
-    //号群信息
+    //队列信息
     KMGroupQueueDetailInfoCell *cell = [_tableView dequeueReusableCellWithIdentifier:[KMGroupQueueDetailInfoCell cellID]];
     KMGroupBaseInfo * baseInfo       = _viewModel.baseInfo;
     

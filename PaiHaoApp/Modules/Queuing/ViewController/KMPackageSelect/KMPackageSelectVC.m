@@ -40,13 +40,13 @@
     //需要判断是否登录
     if ([KMUserManager checkLoginWithPresent:YES]) {
         @weakify(self)
-        //判断套餐中号群是否有的已经排队，倘若有不允许再排套餐
+        //判断套餐中队列是否有的已经排队，倘若有不允许再排套餐
         [[self.viewModel.checkPackageCommand execute:self.selectedID] subscribeNext:^(id  _Nullable x) {
             RACTuple *t = x;
             NSNumber * status = t.fourth;
             if (status.integerValue == 0) {
                 //0 已排队 其他未排
-                [SVProgressHUD showErrorWithStatus:@"套餐中号群有的已经排队，不允许再排套餐" Duration:1];
+                [SVProgressHUD showErrorWithStatus:@"套餐中队列有的已经排队，不允许再排套餐" Duration:1];
             }else{
                 @strongify(self)
                 [[self.viewModel.packageQueueCommand execute:self.selectedID] subscribeNext:^(id  _Nullable x) {

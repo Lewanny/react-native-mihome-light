@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface KMTimeSectionModel : NSObject
-/** 号群ID(数据标识) */
+/** 队列ID(数据标识) */
 @property (nonatomic, copy) NSString *groupId;
 /** 时段ID(数据标识)（若为空则是新增；存在则是修改） */
 @property (nonatomic, copy) NSString *ID;

@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *queueId;
 /** 地址 */
 @property (nonatomic, copy) NSString *groupAdrr;
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupId;
 /** 编号(ID) */
 @property (nonatomic, copy) NSString *groupNo;
@@ -21,11 +21,11 @@
 @property (nonatomic, copy) NSString *processTime;
 /** 排队状态（0排队状态，1已经处理（可评论），2过号，3退出，5已经呼叫，6.解散（可评论）（业务说明，解散叫号员有事离开或时间到了，无法处理完成。）7.已经评分） */
 @property (nonatomic, copy) NSString *queueState;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString *groupName;
 /** 叫号员 */
 @property (nonatomic, copy) NSString *callClerk;
-/** 号群图片 */
+/** 队列图片 */
 @property (nonatomic, copy) NSString *groupImg;
 /** 二维码 */
 @property (nonatomic, copy) NSString * qrcode;

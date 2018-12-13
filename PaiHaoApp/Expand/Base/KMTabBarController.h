@@ -12,7 +12,7 @@
 
 //4个控制器
 #import "KMHomePageViewController.h"//首页
-#import "KMGroupViewController.h"   //号群
+#import "KMGroupViewController.h"   //队列
 #import "KMQueuingViewController.h" //排号
 #import "KMMineViewController.h"    //我的 
 

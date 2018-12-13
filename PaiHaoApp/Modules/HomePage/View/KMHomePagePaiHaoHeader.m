@@ -32,7 +32,7 @@
 //            [self btnClick:_recommendBtn];
 //        }
 
-        //不管怎样都默认选中推荐号群
+        //不管怎样都默认选中推荐队列
         [self btnClick:_recommendBtn];
     }
 }

@@ -11,28 +11,28 @@
 #import "KMOriginalGroupInfo.h"
 #import "KMNewGroupModel.h"
 @interface KMNewGroupViewModel : KMBaseViewModel
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
-/** 原来的号群数据 */
+/** 原来的队列数据 */
 @property (nonatomic, strong) KMOriginalGroupInfo * origin;
-/** 新建的号群数据 */
+/** 新建的队列数据 */
 @property (nonatomic, strong) KMNewGroupModel * groupNew;
 /** 批量开关 */
 @property (nonatomic, assign) BOOL  isBatch;
 /** 限定开关 */
 @property (nonatomic, assign) BOOL  isLimit;
 
-/** 加载之前的号群信息 */
+/** 加载之前的队列信息 */
 @property (nonatomic, strong) RACCommand * infoCommand;
-/** 新建号群 提交 */
+/** 新建队列 提交 */
 @property (nonatomic, strong) RACCommand * addNewCommand;
-/** 修改号群 提交 */
+/** 修改队列 提交 */
 @property (nonatomic, strong) RACCommand * editGroupCommand;
 
 
 -(instancetype)initWithGroupID:(NSString *)groupID;
 
-/** 判断是否新建号群 */
+/** 判断是否新建队列 */
 -(BOOL)isNewBuiltGroup;
 
 #pragma mark - 编辑 -

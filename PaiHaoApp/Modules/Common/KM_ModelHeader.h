@@ -11,7 +11,7 @@
 
 #import "KMBaseModel.h"
 
-#import "KMGroupBriefModel.h" //号群概况
+#import "KMGroupBriefModel.h" //队列概况
 #import "KMBaseDictModel.h"
 #import "KMUserLoginModel.h"
 #import "KMMerchantInfoModel.h"

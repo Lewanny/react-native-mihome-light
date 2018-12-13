@@ -54,7 +54,7 @@
 }
 
 -(void)clickCommitBtn:(UIButton *)sender{
-    //新建号群
+    //新建队列
     if ([_viewModel isNewBuiltGroup]) {
         if ([_viewModel verifyNewGroupParams]) {//验证数据
             @weakify(self)
@@ -64,7 +64,7 @@
             }];
         }
     }else{
-    //编辑号群
+    //编辑队列
         if ([_viewModel verifyEditGroupParams]) {//验证数据
             @weakify(self)
             [[self.viewModel.editGroupCommand execute:nil] subscribeNext:^(id  _Nullable x) {

@@ -12,7 +12,7 @@
 
 /** 右边箭头 */
 @property (nonatomic, strong) UIImageView * rightArrow;
-/** 号群图片 */
+/** 队列图片 */
 @property (nonatomic, strong) UIImageView * photo;
 /** 左边文字 */
 @property (nonatomic, strong) UILabel * leftText;

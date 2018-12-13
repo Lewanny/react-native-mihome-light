@@ -26,7 +26,7 @@
     NSString *title      = @"";
     switch (self.groupType) {
         case KM_GroupTypeRecommend:
-    title                = @"推荐号群";
+    title                = @"推荐队列";
             break;
         case KM_GroupTypeMyArranging:
     title                = @"我的排号";

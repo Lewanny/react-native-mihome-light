@@ -9,13 +9,13 @@
 #import "KMBaseViewModel.h"
 #import "KMGroupDetailInfo.h"
 @interface KMGroupDetailViewModel : KMBaseViewModel
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
-/** 号群详情 */
+/** 队列详情 */
 @property (nonatomic, strong) KMGroupDetailInfo * detailInfo;
 
-/** 请求号群详情 */
+/** 请求队列详情 */
 @property (nonatomic, strong) RACCommand * detailCommand;
-/** 删除号群 */
+/** 删除队列 */
 @property (nonatomic, strong) RACCommand * deleGroupCommand;
 @end

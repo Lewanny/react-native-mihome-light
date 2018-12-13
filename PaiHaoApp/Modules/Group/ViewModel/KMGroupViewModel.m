@@ -12,10 +12,10 @@
 
 #pragma mark - Private Method
 -(NSString *)emptyTitle{
-    return @"等待创建号群";
+    return @"等待创建队列";
 }
 -(NSString *)emptySubTitle{
-    return @"还没有任何号群,您可以免费创建号群,\n发起排队。";
+    return @"还没有任何队列,您可以免费创建队列,\n发起排队。";
 }
 #pragma mark - BaseViewModelInterface
 -(void)km_bindNetWorkRequest{

@@ -18,7 +18,7 @@
 
 /** 滑动时回调 改变透明度 */
 @property (nonatomic, strong) RACSubject * didScrollSubject;
-/** 跳转 行业号群列表 */
+/** 跳转 行业队列列表 */
 @property (nonatomic, strong) RACSubject * pushCategoryList;
 /** 跳转 我的排号 */
 @property (nonatomic, strong) RACSubject * pushMineQueueVC;

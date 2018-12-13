@@ -11,7 +11,7 @@
 #import "KMQueueDetail.h"
 #import "KMQueueDataModel.h"
 typedef NS_ENUM(NSUInteger, CellStyle) {
-    CellStyleGroupInfo,     //号群信息
+    CellStyleGroupInfo,     //队列信息
     CellStylePackageInfo,   //套餐信息
     CellStyleWaitInfo,      //等待信息
     CellStyleQueueInfo      //排队信息
@@ -20,13 +20,13 @@ typedef NS_ENUM(NSUInteger, CellStyle) {
 @interface KMGroupQueueInfoVM : KMBaseViewModel
 
 
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
 /** 排队ID */
 @property (nonatomic, copy) NSString * queueID;
 
 
-/** 号群信息 */
+/** 队列信息 */
 @property (nonatomic, strong) KMGroupBaseInfo * baseInfo;
 /** 排队信息 */
 @property (nonatomic, strong) KMQueueDetail * queueDetail;
@@ -36,7 +36,7 @@ typedef NS_ENUM(NSUInteger, CellStyle) {
 /** 套餐信息 */
 @property (nonatomic, copy) NSString * packageInfo;
 
-/** 请求号群信息 */
+/** 请求队列信息 */
 @property (nonatomic, strong) RACCommand * requestGroupInfo;
 /** 请求排队信息 */
 @property (nonatomic, strong) RACCommand * requestQueueInfo;

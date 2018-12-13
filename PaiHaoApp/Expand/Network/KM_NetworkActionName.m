@@ -10,7 +10,7 @@
 
 @implementation KM_NetworkActionName
 #pragma mark - 首页与注册接口
-/** 推荐号群 */
+/** 推荐队列 */
 +(NSString *)MobileGetShowGroup{
     return @"MobileGetShowGroup";
 }
@@ -18,11 +18,11 @@
 +(NSString *)MobileGetUserQueueInfo{
     return @"MobileGetUserQueueInfo";
 }
-/** 查找号群 */
+/** 查找队列 */
 +(NSString *)MobileGetSearchGroup{
     return @"MobileGetSearchGroup";
 }
-/** 获取行业分类信息（号群行业分类和商户行业分类相同） */
+/** 获取行业分类信息（队列行业分类和商户行业分类相同） */
 +(NSString *)GetMerchantType{
     return @"GetMerchantType";
 }
@@ -53,16 +53,16 @@
 +(NSString *)MobileLogin{
     return @"MobileLogin";
 }
-#pragma mark - 号群接口
-/** 新增号群 */
+#pragma mark - 队列接口
+/** 新增队列 */
 +(NSString *)AddGroupInfo{
     return @"AddGroupInfo";
 }
-/** 加载号群列表 */
+/** 加载队列列表 */
 +(NSString *)MobileGetUserGroupInfo{
     return @"MobileGetUserGroupInfo";
 }
-/** 加载号群详细信息 */
+/** 加载队列详细信息 */
 +(NSString *)MobileGetGroupDetailedInfo{
     return @"MobileGetGroupDetailedInfo";
 }
@@ -86,43 +86,43 @@
 +(NSString *)GetWindowInfoByUserIdEx{
     return @"GetWindowInfoByUserIdEx";
 }
-/** 号群绑定窗口（一个号群可绑定多个窗口，由多个窗口绑定叫号办理。） */
+/** 队列绑定窗口（一个队列可绑定多个窗口，由多个窗口绑定叫号办理。） */
 +(NSString *)AddWindowGroupEx{
     return @"AddWindowGroupEx";
 }
-/** 获取当前号群已经绑定的窗口列表 */
+/** 获取当前队列已经绑定的窗口列表 */
 +(NSString *)GetWindowInfoByGroupId{
     return @"GetWindowInfoByGroupId";
 }
-/** 号群解绑窗口 */
+/** 队列解绑窗口 */
 +(NSString *)DelWindowGroupEx{
     return @"DelWindowGroupEx";
 }
-/** 删除号群 */
+/** 删除队列 */
 +(NSString *)DelGroupInfo{
     return @"DelGroupInfo";
 }
 
-/** 获取号群的窗口列表 */
+/** 获取队列的窗口列表 */
 +(NSString *)GetWindowInfoByGroupIdEx{
     return @"GetWindowInfoByGroupId";//@"GetWindowInfoByGroupIdEx";
 }
 
-/** 修改号群信息：第一步通过号群ID获取号群信息，渲染到修改界面；第二部修改信息提交。*/
-/** 第一步获取号群信息 */
+/** 修改队列信息：第一步通过队列ID获取队列信息，渲染到修改界面；第二部修改信息提交。*/
+/** 第一步获取队列信息 */
 +(NSString *)GetGroupInfoByID{
     return @"GetGroupInfoByID";
 }
-/** 第二步修改号群信息，并提交 */
+/** 第二步修改队列信息，并提交 */
 +(NSString *)EditGroupInfoEx{
     return @"EditGroupInfoEx";
 }
 
-/** 判断号群是否被当前用户收藏 */
+/** 判断队列是否被当前用户收藏 */
 +(NSString *)GetCollectionInfoByGroupId{
     return @"GetCollectionInfoByGroupId";
 }
-/** 收藏号群 */
+/** 收藏队列 */
 +(NSString *)AddCollectionInfo{
     return @"AddCollectionInfo";
 }
@@ -132,7 +132,7 @@
     return @"MobileGetQueueDataByGroupId";//@"GetQueueDataByGroupId";// MobileGetQueueDataByGroupId GetScreenDataByGroupId
 }
 
-/** 首页---景区等 进入号群详情 */
+/** 首页---景区等 进入队列详情 */
 + (NSString *)GetScreenDataDetailByGroupId{
     return @"GetScreenDataByGroupId";
 }
@@ -352,15 +352,15 @@
 +(NSString *)GetGroupCommentByGroupId{
     return @"GetGroupCommentByGroupId";
 }
-/** 加入号群 */
+/** 加入队列 */
 +(NSString *)AddQueueInfo{
     return @"AddQueueInfo";
 }
-/** 带套餐 加入号群 */
+/** 带套餐 加入队列 */
 +(NSString *)PackageQueue{
     return @"PackageQueue";
 }
-/** 号群信息 */
+/** 队列信息 */
 +(NSString *)MobileGetGroupInfoByGroupId{
     return @"MobileGetGroupInfoByGroupId";
 }
@@ -385,7 +385,7 @@
     return @"MobileGetQueueDetailed";
 }
 #pragma mark - 套餐
-/** 加入套餐页面获取套餐信息（通过号群ID获取套餐信息） */
+/** 加入套餐页面获取套餐信息（通过队列ID获取套餐信息） */
 +(NSString *)GetPackageLists{
     return @"GetPackageLists";
 }
@@ -413,7 +413,7 @@
 +(NSString *)MobileGetPackageSchedule{
     return @"MobileGetPackageSchedule";
 }
-/** 判断套餐中号群是否有的已经排队 */
+/** 判断套餐中队列是否有的已经排队 */
 +(NSString *)CheckPackage{
     return @"CheckPackage";
 }

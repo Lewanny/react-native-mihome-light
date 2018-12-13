@@ -85,7 +85,7 @@
     NSAttributedString *attr         = [NSAttributedString attributedStringWithAttachment:attachment];
     NSMutableAttributedString *attrM = [NSMutableAttributedString new];
     [attrM appendAttributedString:attr];
-    [attrM appendString:@"  请输入关键字或号群名称/ID"];
+    [attrM appendString:@"  请输入关键字或队列名称/ID"];
     attrM.font                       = kFont24;
     attrM.color                      = kFontColorGray;
     [_searchTF setAttributedPlaceholder:attrM];

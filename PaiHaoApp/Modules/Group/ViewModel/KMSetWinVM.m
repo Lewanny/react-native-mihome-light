@@ -59,7 +59,7 @@
             [SVProgressHUD showErrorWithStatus:@"后台服务器错误" Duration:1];
         }];
     }];
-    //获取当前号群已经绑定的窗口列表
+    //获取当前队列已经绑定的窗口列表
     _bindedWin            = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[[KM_NetworkApi windowWithGroupID:input] doNext:^(id  _Nullable x) {
             @strongify(self)

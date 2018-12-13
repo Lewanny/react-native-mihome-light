@@ -153,7 +153,7 @@
 
 #pragma mark - KMBaseViewControllerDataSource -
 -(NSMutableAttributedString *)setTitle{
-    return KMBaseNavTitle(@"号群详情");
+    return KMBaseNavTitle(@"队列详情");
 }
 
 #pragma mark - BaseViewControllerInterface -

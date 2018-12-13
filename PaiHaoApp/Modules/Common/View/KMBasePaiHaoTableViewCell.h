@@ -10,13 +10,13 @@
 
 @interface KMBasePaiHaoTableViewCell : KMBaseTableViewCell
 
-/** 号群图片 */
+/** 队列图片 */
 @property (strong, nonatomic) UIImageView *iconImageView;
-/** 号群名称 */
+/** 队列名称 */
 @property (strong, nonatomic) UILabel *nameLabel;
-/** 号群距离 */
+/** 队列距离 */
 @property (strong, nonatomic) UILabel *distanceLabel;
-/** 号群ID */
+/** 队列ID */
 @property (strong, nonatomic) UILabel *IDLabel;
 /** 排号时间 */
 @property (strong, nonatomic) UILabel *timeLabel;

@@ -85,7 +85,7 @@
             [SVProgressHUD showErrorWithStatus:@"后台服务器错误, 获取排队信息失败" Duration:1];
         }];
     }];
-    //请求号群详情
+    //请求队列详情
     _detailCommand                                       = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         @strongify(self)
         return [[[KM_NetworkApi groupDetailInfoWithID:self.groupID] doNext:^(id  _Nullable x) {
@@ -186,7 +186,7 @@
             [SVProgressHUD showErrorWithStatus:@"后台服务器错误, 操作失败" Duration:1];
         }];
     }];
-    //获取当前号群已经绑定的窗口列表
+    //获取当前队列已经绑定的窗口列表
     _bindedWinCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[[KM_NetworkApi bindedWindowWithGroupID:input] doNext:^(id  _Nullable x) {
             @strongify(self)

@@ -13,11 +13,11 @@
 @property (nonatomic, copy) NSString *timespan;
 /** 等待人数 */
 @property (nonatomic, assign) NSInteger frontnumber;
-/** 号群ID(数据标识) */
+/** 队列ID(数据标识) */
 @property (nonatomic, copy) NSString *groupid;
 /** 图片 */
 @property (nonatomic, copy) NSString *groupphoto;
-/** 号群编号（ID） */
+/** 队列编号（ID） */
 @property (nonatomic, copy) NSString *groupno;
 /** 等待时间 */
 @property (nonatomic, assign) CGFloat waittime;

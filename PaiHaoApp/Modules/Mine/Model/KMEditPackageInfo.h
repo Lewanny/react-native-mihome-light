@@ -10,9 +10,9 @@
 
 
 @interface KMPackageRelate : NSObject
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString *groupId;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString *groupName;
 /** 是否被选中 */
 @property (nonatomic, assign) BOOL selected;
@@ -24,7 +24,7 @@
 @interface KMEditPackageInfo : NSObject
 /** 套餐ID */
 @property (nonatomic, assign) NSInteger ID;
-/** 号群关系 */
+/** 队列关系 */
 @property (nonatomic, strong) NSArray<KMPackageRelate *> *relate;
 /** 套餐名称 */
 @property (nonatomic, copy) NSString *packageName;

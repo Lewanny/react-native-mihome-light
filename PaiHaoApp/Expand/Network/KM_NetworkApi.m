@@ -45,7 +45,7 @@
 
 #pragma mark - 首页与注册接口
 
-/** 推荐号群 */
+/** 推荐队列 */
 +(RACSignal *)requestRecommendGroup{
 
     NSDictionary *params                                                                                                                                                       = [KM_NetworkParams paramsWithActionName:KM_NetworkActionName.MobileGetShowGroup paramsSet:nil entrySet:nil];
@@ -64,7 +64,7 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-/** 根据行业分类获取号群列表 */
+/** 根据行业分类获取队列列表 */
 +(RACSignal *)requestQueueListWithCategory:(NSString *)category
                                      Index:(NSInteger)index
                                     Status:(NSInteger)status
@@ -726,8 +726,8 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-#pragma mark - 号群
-/** 我的号群列表 */
+#pragma mark - 队列
+/** 我的队列列表 */
 +(RACSignal *)userGroupInfo{
     NSString *userId                                                                                                                                                           = KMUserDefault.userID;
     //转换成后台需要的格式
@@ -738,7 +738,7 @@
                                                               entrySet:nil];
     return [KM_NetworkClient requestParams:finalParams];
 }
-/** 判断号群是否被当前用户收藏 */
+/** 判断队列是否被当前用户收藏 */
 +(RACSignal *)checkCollectionStatusWithGroupId:(NSString *)groupID{
     NSString *userId                                                                                                                                                           = KMUserDefault.userID;
     //转换成后台需要的格式
@@ -749,7 +749,7 @@
                                                               entrySet:nil];
     return [KM_NetworkClient requestParams:finalParams];
 }
-/** 收藏号群 */
+/** 收藏队列 */
 +(RACSignal *)addCollectionWithGroupID:(NSString *)groupID{
     NSString *userId                                                                                                                                                           = KMUserDefault.userID;
     NSDictionary *params                                                                                                                                                       = @{kUserId : userId, kGroupId : groupID};
@@ -769,7 +769,7 @@
                                                               entrySet:nil];
     return [KM_NetworkClient requestParams:finalParams];
 }
-/** 加载号群详细信息 */
+/** 加载队列详细信息 */
 +(RACSignal *)groupDetailInfoWithID:(NSString *)groupID{
     NSString *userId                                                                                                                                                           = KMUserDefault.userID;
     //转换成后台需要的格式
@@ -781,7 +781,7 @@
     return [KM_NetworkClient requestParams:finalParams Cache:YES];
 }
 
-/** 加载号群排队信息 */
+/** 加载队列排队信息 */
 +(RACSignal *)queueDataByGroupID:(NSString *)groupID WinID:(NSString *)winID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kGroupId : groupID}, @{kSingleNumber : @"0"}, @{kWindowId : winID ? winID :@""}, nil];
@@ -823,7 +823,7 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-/** 获取当前号群已经绑定的窗口列表 窗口解绑列表 */ //GetWindowInfoByGroupIdEx
+/** 获取当前队列已经绑定的窗口列表 窗口解绑列表 */ //GetWindowInfoByGroupIdEx
 +(RACSignal *)windowWithGroupID:(NSString *)groupID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kGroupId : groupID}, nil];
@@ -848,7 +848,7 @@
                                                               entrySet:nil];
     return [KM_NetworkClient requestParams:finalParams];
 }
-/** 号群绑定窗口 */
+/** 队列绑定窗口 */
 +(RACSignal *)bindWindow:(NSString *)windowID Group:(NSString *)groupID{
     NSArray *entrySet                                                                                                                                                          = @[@{kGroupId : groupID, kWindowId : windowID}];
     //再加上其他网络请求参数
@@ -873,7 +873,7 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-/** 号群解绑窗口 窗口ID串，多个以3个“#”分割 */
+/** 队列解绑窗口 窗口ID串，多个以3个“#”分割 */
 +(RACSignal *)unbindWindow:(NSString *)windowID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kWindowId : windowID}, nil];
@@ -883,7 +883,7 @@
                                                               entrySet:nil];
     return [KM_NetworkClient requestParams:finalParams Cache:YES];
 }
-/** 搜索号群 */
+/** 搜索队列 */
 +(RACSignal *)searchGroupWithKeyword:(NSString *)keyword Index:(NSInteger)index{
 
     NSString *locationCity                                                                                                                                                     = [NSUserDefaults stringForKey:kLocationCity];
@@ -985,7 +985,7 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-/** 删除号群 */
+/** 删除队列 */
 +(RACSignal *)deleGroupWithID:(NSString *)groupID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kGroupId : groupID}, nil];
@@ -1042,7 +1042,7 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-/** 加载原来的号群信息 */
+/** 加载原来的队列信息 */
 +(RACSignal *)originalGroupInfoWithID:(NSString *)groupID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kGroupId : groupID}, nil];
@@ -1053,7 +1053,7 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-/** 新建号群 */
+/** 新建队列 */
 +(RACSignal *)addNewGroupWithData:(NSDictionary *)data{
     //再加上其他网络请求参数
     NSDictionary *finalParams                                                                                                                                                  = [KM_NetworkParams paramsWithActionName:[KM_NetworkActionName AddGroupInfo]
@@ -1061,7 +1061,7 @@
                                                               entrySet:@[data]];
     return [KM_NetworkClient requestParams:finalParams];
 }
-/** 编辑号群 */
+/** 编辑队列 */
 +(RACSignal *)editGroupInfoWithData:(NSDictionary *)data{
     //再加上其他网络请求参数
     NSDictionary *finalParams                                                                                                                                                  = [KM_NetworkParams paramsWithActionName:[KM_NetworkActionName EditGroupInfoEx]
@@ -1138,7 +1138,7 @@
                                                               entrySet:nil];
     return [KM_NetworkClient requestParams:finalParams];
 }
-/** 号群信息 */
+/** 队列信息 */
 +(RACSignal *)groupInfoWithGroupID:(NSString *)groupID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kGroupId : groupID}, nil];
@@ -1149,7 +1149,7 @@
     return [KM_NetworkClient requestParams:finalParams];
 }
 
-/** 获取号群评论信息 */
+/** 获取队列评论信息 */
 +(RACSignal *)commentListWithGroupId:(NSString *)groupID{
 
     //转换成后台需要的格式
@@ -1274,7 +1274,7 @@
 }
 
 #pragma mark - 套餐
-/** 通过号群ID获取套餐信息 */
+/** 通过队列ID获取套餐信息 */
 +(RACSignal *)packageLists:(NSString *)groupID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kGroupId : groupID}, nil];
@@ -1340,7 +1340,7 @@
                                                               entrySet:nil];
     return [KM_NetworkClient requestParams:finalParams];
 }
-/** 判断套餐中号群是否有的已经排队 */
+/** 判断套餐中队列是否有的已经排队 */
 +(RACSignal *)checkPackageWithID:(NSString *)packageID{
     //转换成后台需要的格式
     NSArray *params                                                                                                                                                            = [KMTool weirdDictWithDictionarys:@{kUserId : KMUserDefault.userID}, @{@"packageId" : packageID}, nil];

@@ -20,11 +20,11 @@
 +(NSString *)uploadImageUrl;
 
 #pragma mark - 首页与注册接口
-/** 推荐号群 */
+/** 推荐队列 */
 +(RACSignal *)requestRecommendGroup;
 /** 我的排号（先登录) */
 +(RACSignal *)requestMineQueue;
-/** 根据行业分类获取号群列表 */
+/** 根据行业分类获取队列列表 */
 +(RACSignal *)requestQueueListWithCategory:(NSString *)category
                                      Index:(NSInteger)index
                                     Status:(NSInteger)status
@@ -186,34 +186,34 @@
 /** 删除消息 */
 +(RACSignal *)deleMessageWithMsgID:(NSString *)msgID;
 
-#pragma mark - 号群
-/** 我的号群列表 */
+#pragma mark - 队列
+/** 我的队列列表 */
 +(RACSignal *)userGroupInfo;
-/** 判断号群是否被当前用户收藏 */
+/** 判断队列是否被当前用户收藏 */
 +(RACSignal *)checkCollectionStatusWithGroupId:(NSString *)groupID;
-/** 收藏号群 */
+/** 收藏队列 */
 +(RACSignal *)addCollectionWithGroupID:(NSString *)groupID;
 /** 取消收藏 */
 +(RACSignal *)cancelCollectionWithColID:(NSString *)colID;
-/** 加载号群详细信息 */
+/** 加载队列详细信息 */
 +(RACSignal *)groupDetailInfoWithID:(NSString *)groupID;
-/** 加载号群排队信息 */
+/** 加载队列排队信息 */
 +(RACSignal *)queueDataByGroupID:(NSString *)groupID WinID:(NSString *)winID;
 /** 窗口分配--加载当前用户名下未分配的窗口 */
 +(RACSignal *)unabsorbedWindow;
 /** 呼叫选择窗口列表 */
 +(RACSignal *)bindedWindowWithGroupID:(NSString *)groupID;
-/** 获取当前号群已经绑定的窗口列表 窗口解绑列表 */ //GetWindowInfoByGroupIdEx
+/** 获取当前队列已经绑定的窗口列表 窗口解绑列表 */ //GetWindowInfoByGroupIdEx
 +(RACSignal *)windowWithGroupID:(NSString *)groupID;
 
 /** 设置当前呼叫窗口（设置当前叫号窗口的窗口号，进行呼叫） */
 +(RACSignal *)bindCallWindowWithWindowID:(NSString *)windowID;
 
-/** 号群绑定窗口 窗口ID串，多个以3个“#”分割 */
+/** 队列绑定窗口 窗口ID串，多个以3个“#”分割 */
 +(RACSignal *)bindWindow:(NSString *)windowID Group:(NSString *)groupID;
-/** 号群解绑窗口 窗口ID串，多个以3个“#”分割 */
+/** 队列解绑窗口 窗口ID串，多个以3个“#”分割 */
 +(RACSignal *)unbindWindow:(NSString *)windowID;
-/** 搜索号群 */
+/** 搜索队列 */
 +(RACSignal *)searchGroupWithKeyword:(NSString *)keyword Index:(NSInteger)index;
 
 /** 过号 */
@@ -228,7 +228,7 @@
 +(RACSignal *)suspendWithQueueID:(NSString *)queueID;
 /** 解散 */
 +(RACSignal *)disbandWithGroupID:(NSString *)groupID;
-/** 删除号群 */
+/** 删除队列 */
 +(RACSignal *)deleGroupWithID:(NSString *)groupID;
 /** 现场排号 */
 +(RACSignal *)sceneQueueWithGrouoID:(NSString *)groupID UserID:(NSString *)userID;
@@ -247,11 +247,11 @@
 /** 提交 自动续建 */
 +(RACSignal *)editAutoGroupTimeWithData:(NSDictionary *)data;
 
-/** 加载原来的号群信息 */
+/** 加载原来的队列信息 */
 +(RACSignal *)originalGroupInfoWithID:(NSString *)groupID;
-/** 新建号群 */
+/** 新建队列 */
 +(RACSignal *)addNewGroupWithData:(NSDictionary *)data;
-/** 编辑号群 */
+/** 编辑队列 */
 +(RACSignal *)editGroupInfoWithData:(NSDictionary *)data;
 
 #pragma mark - 批量叫号 -
@@ -269,9 +269,9 @@
 #pragma mark - 排号
 /** 查看是否已经排队 */
 +(RACSignal *)checkQueueInfo:(NSString *)groupID;
-/** 号群信息 */
+/** 队列信息 */
 +(RACSignal *)groupInfoWithGroupID:(NSString *)groupID;
-/** 获取号群评论信息 */
+/** 获取队列评论信息 */
 +(RACSignal *)commentListWithGroupId:(NSString *)groupID;
 /** 参加排号 */
 +(RACSignal *)joinQueueWithGroupID:(NSString *)groupID
@@ -302,7 +302,7 @@
                               Score:(NSNumber *)score
                             Comment:(NSString *)comment;
 #pragma mark - 套餐
-/** 通过号群ID获取套餐信息 */
+/** 通过队列ID获取套餐信息 */
 +(RACSignal *)packageLists:(NSString *)groupID;
 /** 获取用户套餐信息 */
 +(RACSignal *)userPackageList;
@@ -316,7 +316,7 @@
 +(RACSignal *)editPackageWith:(NSDictionary *)param;
 /** 套餐进度 */
 +(RACSignal *)packageSchedule:(NSString *)packageID;
-/** 判断套餐中号群是否有的已经排队 */
+/** 判断套餐中队列是否有的已经排队 */
 +(RACSignal *)checkPackageWithID:(NSString *)packageID;
 
 /**

@@ -9,7 +9,7 @@
 #import "KMGroupCallController.h"
 #import "KMGroupCallViewModel.h"
 
-#import "KMGroupInfoCell.h"//号群信息
+#import "KMGroupInfoCell.h"//队列信息
 #import "KMGroupWaitInfoCell.h"//单人等待信息
 #import "KMGroupQueueDataCell.h"//排队信息
 #import "KMBatchWaitInfoCell.h"//批量等待信息
@@ -81,7 +81,7 @@
 //        return;
 //    }
     if (_viewModel.bindedWinArr.count == 0) {
-       //该号群没有可以绑定的窗口
+       //该队列没有可以绑定的窗口
         [self refreshQueueData];
     }else {
         //选择窗口
@@ -110,7 +110,7 @@
         }
     } cancelBlock:^(ActionSheetStringPicker *picker) {
         @strongify(self)
-        //点击“呼叫“按钮的时候，在弹出的选择窗口中如果没选窗口时，点”取消“就直接返回号群详情页，这个能不能也帮忙改一下？
+        //点击“呼叫“按钮的时候，在弹出的选择窗口中如果没选窗口时，点”取消“就直接返回队列详情页，这个能不能也帮忙改一下？
         [self.navigationController popViewControllerAnimated:YES];
     } origin:self.view];
 }
@@ -122,7 +122,7 @@
 
 //是否该选择窗口
 -(BOOL)checkWindowSelect{
-    //号群有绑定的窗口 且 没选中窗口时
+    //队列有绑定的窗口 且 没选中窗口时
     if (_viewModel.bindedWinArr.count != 0 && _viewModel.selectWindowID == nil) {
         [self handleWindow];
         return NO;
@@ -162,7 +162,7 @@
     }
 }
 
-//解散号群
+//解散队列
 -(void)dissolveGroup{
     @weakify(self)
     [LBXAlertAction showAlertWithTitle:@"提示" msg:@"解散和未办完退出，直接影响用户体验，会影响你的信用值，信用值过低，可能会被暂时封号，请谨慎操作，建议你叫完号，排小二代表用户谢谢你了！" buttonsStatement:@[@"确认解散", @"返回"] chooseBlock:^(NSInteger buttonIdx) {
@@ -195,7 +195,7 @@
         [printer appendNewLine];
         [printer appendText:@"当日有效，呼叫3次未到请重新排队" alignment:KM_TextAlignmentCenter fontSize:KM_FontSizeTitleSmalle];
         
-        NSString *tips                            = @"排号网提醒您：您可关注排号网公众号或下载APP，搜索号群或ID，就可以用手机代您排队了，并有实时提醒，排队再也不用现场苦等了。";
+        NSString *tips                            = @"排号网提醒您：您可关注排号网公众号或下载APP，搜索队列或ID，就可以用手机代您排队了，并有实时提醒，排队再也不用现场苦等了。";
         
         [printer appendText:tips alignment:KM_TextAlignmentLeft fontSize:KM_FontSizeTitleSmalle];
         [printer appendNewLine];
@@ -311,7 +311,7 @@
             //现场排号
             [self sceneQueue];
         }else if (selectedIndex == 2){
-            //解散号群
+            //解散队列
             [self dissolveGroup];
         }
     } dismissBlock:nil];
@@ -417,7 +417,7 @@
         [self.tableView reloadData];
     }];
 
-    //更新号群详情
+    //更新队列详情
 //    [self.viewModel.detailCommand.executionSignals.flatten subscribeNext:^(id  _Nullable x) {
 //        @strongify(self)
 //       // [self.tableView reloadSection:0 withRowAnimation:UITableViewRowAnimationNone];

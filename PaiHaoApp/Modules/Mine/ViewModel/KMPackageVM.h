@@ -34,9 +34,9 @@
 
 @property (nonatomic, copy) NSString * packageInfo;
 
-/** 新建时  获取我的号群列表 */
+/** 新建时  获取我的队列列表 */
 @property (nonatomic, strong) RACCommand * groupListCommand;
-/** 新建号群 */
+/** 新建队列 */
 @property (nonatomic, strong) RACCommand * addNewPackageCommand;
 
 @property (nonatomic, strong) NSMutableArray * groupArr;

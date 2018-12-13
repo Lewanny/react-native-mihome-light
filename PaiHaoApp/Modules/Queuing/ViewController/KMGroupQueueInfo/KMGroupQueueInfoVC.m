@@ -142,7 +142,7 @@
     
     CellStyle style                     = [self.viewModel styleForIndexPath:indexPath];
     if (style == CellStyleGroupInfo) {
-        //号群信息
+        //队列信息
         KMGroupQueueInfoCell *gCell     = [self.tableView dequeueReusableCellWithIdentifier:[KMGroupQueueInfoCell cellID]];
         [gCell km_bindData:self.viewModel.baseInfo];
         @weakify(self)

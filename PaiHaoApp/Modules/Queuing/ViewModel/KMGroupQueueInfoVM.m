@@ -13,7 +13,7 @@
 #pragma mark - BaseViewModelInterface
 -(void)km_bindNetWorkRequest{
     @weakify(self)
-    //号群信息
+    //队列信息
     _requestGroupInfo                 = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[[KM_NetworkApi groupInfoWithGroupID:input] doNext:^(id  _Nullable x) {
             @strongify(self)

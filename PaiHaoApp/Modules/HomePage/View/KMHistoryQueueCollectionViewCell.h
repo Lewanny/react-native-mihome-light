@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface KMHistoryQueueCollectionViewCell : KMBaseCollectionViewCell
-/** 号群图片 */
+/** 队列图片 */
 @property (strong, nonatomic) IBOutlet UIImageView *iconImg;
-/** 号群名称 */
+/** 队列名称 */
 @property (strong, nonatomic) IBOutlet UILabel *nameLbl;
-/** 号群ID */
+/** 队列ID */
 @property (strong, nonatomic) IBOutlet UILabel *idLabel;
 /** 办理时间 */
 @property (strong, nonatomic) IBOutlet UILabel *timeLbl;

@@ -14,7 +14,7 @@
 #pragma mark - BaseViewModelInterface
 -(void)km_bindNetWorkRequest{
     @weakify(self)
-    //号群信息
+    //队列信息
     _requestGroupInfo                 = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[[KM_NetworkApi groupInfoWithGroupID:input] doNext:^(id  _Nullable x) {
             @strongify(self)
@@ -185,7 +185,7 @@
         [self.reloadSubject sendNext:nil];
     }];
     
-    //判断套餐中号群是否有的已经排队，倘若有不允许再排套餐
+    //判断套餐中队列是否有的已经排队，倘若有不允许再排套餐
     _checkPackageCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         return [[KM_NetworkApi checkPackageWithID:input] doError:^(NSError * _Nonnull error) {
 //            [SVProgressHUD showErrorWithStatus:@"后台服务器错误" Duration:1];
@@ -216,11 +216,11 @@
             CLLocationDistance meters  = [location distanceFromLocation:targetLocation];
             if (meters > 200) {
                 ret = YES;
-                [UIAlertView showMessage:@"该号群管理员不允许远程排号！请到现场参与。"];
+                [UIAlertView showMessage:@"该队列管理员不允许远程排号！请到现场参与。"];
             }
         }else{
             ret = YES;
-            [UIAlertView showMessage:@"获取当前定位失败，该号群管理员不允许远程排号！"];
+            [UIAlertView showMessage:@"获取当前定位失败，该队列管理员不允许远程排号！"];
         }
     }
     return ret;
@@ -326,15 +326,15 @@
 /** 是否可以排队 */
 -(BOOL)checkCanQueue{
     if (self.baseInfo.groupstatus == 1) {
-        [SVProgressHUD showInfoWithStatus:@"号群已锁定，不允许排队" Duration:1];
+        [SVProgressHUD showInfoWithStatus:@"队列已锁定，不允许排队" Duration:1];
         return NO;
     }
     if (self.baseInfo.groupstatus == 2) {
-        [SVProgressHUD showInfoWithStatus:@"号群已删除/注销，不允许排队" Duration:1];
+        [SVProgressHUD showInfoWithStatus:@"队列已删除/注销，不允许排队" Duration:1];
         return NO;
     }
     if (self.baseInfo.groupstatus == 3) {
-        [SVProgressHUD showInfoWithStatus:@"号群人数已满，不允许排队" Duration:1];
+        [SVProgressHUD showInfoWithStatus:@"队列人数已满，不允许排队" Duration:1];
         return NO;
     }
     //时间段

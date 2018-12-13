@@ -12,16 +12,16 @@
 #import "KMGroupCommentModel.h"
 #import "KMPackageItem.h"
 typedef NS_ENUM(NSUInteger, SectionStyle) {
-    SectionStyleGroupInfo,  //号群信息
+    SectionStyleGroupInfo,  //队列信息
     SectionStyleQueueInfo,  //排队信息
     SectionStyleEvaluate,   //用户评价
-    SectionStyleRelated,    //相关号群
+    SectionStyleRelated,    //相关队列
     SectionStyleNone        //没有信息
 };
 
 @interface KMGroupQueueDetailVM : KMBaseViewModel
 
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
 /** 语音提醒 */
 @property (nonatomic, assign) BOOL  isVoice;
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, SectionStyle) {
 @property (nonatomic, copy) NSString * queueID;
 /** 套餐数据 */
 @property (nonatomic, copy) NSArray * packageList;
-/** 号群信息 */
+/** 队列信息 */
 @property (nonatomic, strong) KMGroupBaseInfo * baseInfo;
 /** 收藏ID */
 @property (nonatomic, copy) NSString * collectionID;
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSUInteger, SectionStyle) {
 @property (nonatomic, strong) NSMutableArray * queueArr;
 /** 评价数据 */
 @property (nonatomic, strong) NSMutableArray * evaluateArr;
-/** 相关号群 */
+/** 相关队列 */
 @property (nonatomic, strong) NSMutableArray * relatedArr;
 /** 评论模型 */
 @property (nonatomic, strong) KMGroupCommentModel * commentInfo;
@@ -52,7 +52,7 @@ typedef NS_ENUM(NSUInteger, SectionStyle) {
 /** 套餐名称 */
 @property (nonatomic, copy) NSString * packageName;
 
-/** 请求号群信息 */
+/** 请求队列信息 */
 @property (nonatomic, strong) RACCommand * requestGroupInfo;
 /** 请求套餐信息 */
 @property (nonatomic, strong) RACCommand * requestPackageInfo;
@@ -62,7 +62,7 @@ typedef NS_ENUM(NSUInteger, SectionStyle) {
 @property (nonatomic, strong) RACCommand * requestComment;
 /** 参加排队 */
 @property (nonatomic, strong) RACCommand * joinQueueCommand;
-/** 判断套餐中号群是否有的已经排队，倘若有不允许再排套餐 */
+/** 判断套餐中队列是否有的已经排队，倘若有不允许再排套餐 */
 @property (nonatomic, strong) RACCommand * checkPackageCommand;
 /** 参加套餐 */
 @property (nonatomic, strong) RACCommand * packageQueueCommand;

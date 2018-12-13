@@ -207,7 +207,7 @@
     }
     else{
 //        [_nameLabel setText:@"时代城四季椰子鸡"];
-//        [_iconImageView setImage:[UIImage imageNamed:@"20搜索号群图片_03"]];
+//        [_iconImageView setImage:[UIImage imageNamed:@"20搜索队列图片_03"]];
 //        [_distanceLabel setText:@"1.9km"];
 //        [_timeLabel setText:@"9:00-18:00"];
 //        [_IDLabel setText:@"ID:9998"];

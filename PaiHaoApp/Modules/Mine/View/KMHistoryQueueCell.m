@@ -14,11 +14,11 @@
 /** 排队状态 */
 @property (nonatomic, assign) KM_QueueState qeueState;
 
-/** 号群图片 */
+/** 队列图片 */
 @property (strong, nonatomic)  UIImageView *iconImg;
-/** 号群名称 */
+/** 队列名称 */
 @property (strong, nonatomic)  UILabel *nameLbl;
-/** 号群ID */
+/** 队列ID */
 @property (strong, nonatomic)  UILabel *idLabel;
 /** 办理时间 */
 @property (strong, nonatomic)  UILabel *timeLbl;

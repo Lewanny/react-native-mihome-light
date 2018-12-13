@@ -9,15 +9,15 @@
 #import "KMBaseViewController.h"
 #import "KMGroupInfo.h"
 @interface KMQRCodeVC : KMBaseViewController
-/** 号群图片 */
+/** 队列图片 */
 @property (nonatomic, copy) NSString * groupIcon;
-/** 号群名称 */
+/** 队列名称 */
 @property (nonatomic, copy) NSString * groupName;
-/** 号群ID */
+/** 队列ID */
 @property (nonatomic, copy) NSString * groupID;
-/** 号群编号 */
+/** 队列编号 */
 @property (nonatomic, copy) NSString * groupNo;
-/** 号群二维码 */
+/** 队列二维码 */
 @property (nonatomic, copy) NSString * groupQRIcon;
 
 @end

@@ -27,6 +27,6 @@
 @property (nonatomic, copy) NSString *reserve;
 /** 创建时间 */
 @property (nonatomic, copy) NSString *createtime;
-/** 序号#号群ID；逗号分隔 */
+/** 序号#队列ID；逗号分隔 */
 @property (nonatomic, copy) NSString *groupIds;
 @end

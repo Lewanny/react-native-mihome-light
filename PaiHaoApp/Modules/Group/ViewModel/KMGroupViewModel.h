@@ -12,7 +12,7 @@
 
 @property (nonatomic, strong) NSMutableArray * groupList;
 
-/** 请求我的号群 */
+/** 请求我的队列 */
 @property (nonatomic, strong) RACCommand * requestGroupList;
 
 -(NSString *)emptyTitle;

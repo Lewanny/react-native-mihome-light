@@ -23,7 +23,7 @@
 #pragma mark - BaseViewModelInterface
 -(void)km_bindNetWorkRequest{
     @weakify(self)
-    //请求行业类型号群
+    //请求行业类型队列
     _requestCategoryList        = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
         @strongify(self)
         return [[[KM_NetworkApi requestQueueListWithCategory:input Index:self.currentPage Status:self.queueSort City:self.sortArea] doNext:^(id  _Nullable x) {

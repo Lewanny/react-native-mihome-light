@@ -10,13 +10,13 @@
 
 @interface KM_NetworkActionName : NSObject
 #pragma mark - 首页与注册接口
-/** 推荐号群 */
+/** 推荐队列 */
 +(NSString *)MobileGetShowGroup;
 /** 我的排号（先登录） */
 +(NSString *)MobileGetUserQueueInfo;
-/** 查找号群 */
+/** 查找队列 */
 +(NSString *)MobileGetSearchGroup;
-/** 获取行业分类信息（号群行业分类和商户行业分类相同） */
+/** 获取行业分类信息（队列行业分类和商户行业分类相同） */
 +(NSString *)GetMerchantType;
 /** 获取验证码 */
 +(NSString *)AHSMSEx;
@@ -32,12 +32,12 @@
 +(NSString *)MobileModifyPassWord;
 /** 登录 */
 +(NSString *)MobileLogin;
-#pragma mark - 号群接口
-/** 新增号群 */
+#pragma mark - 队列接口
+/** 新增队列 */
 +(NSString *)AddGroupInfo;
-/** 加载号群列表 */
+/** 加载队列列表 */
 +(NSString *)MobileGetUserGroupInfo;
-/** 加载号群详细信息 */
+/** 加载队列详细信息 */
 +(NSString *)MobileGetGroupDetailedInfo;
 /** 加载原先数据（包含当前排队开始时间和结束时间以及自动续建设置信息） */
 +(NSString *)GetAutomaticInfoByGroupId;
@@ -49,27 +49,27 @@
 +(NSString *)AutomaticSetting;
 /** 窗口分配--加载当前用户名下未分配的窗口 */
 +(NSString *)GetWindowInfoByUserIdEx;
-/** 号群绑定窗口（一个号群可绑定多个窗口，由多个窗口绑定叫号办理。） */
+/** 队列绑定窗口（一个队列可绑定多个窗口，由多个窗口绑定叫号办理。） */
 +(NSString *)AddWindowGroupEx;
-/** 获取当前号群已经绑定的窗口列表 */
+/** 获取当前队列已经绑定的窗口列表 */
 +(NSString *)GetWindowInfoByGroupId;
-/** 号群解绑窗口 */
+/** 队列解绑窗口 */
 +(NSString *)DelWindowGroupEx;
-/** 删除号群 */
+/** 删除队列 */
 +(NSString *)DelGroupInfo;
 
-/** 获取号群的窗口列表 */
+/** 获取队列的窗口列表 */
 +(NSString *)GetWindowInfoByGroupIdEx;
 
-/** 修改号群信息：第一步通过号群ID获取号群信息，渲染到修改界面；第二部修改信息提交。*/
-/** 第一步获取号群信息 */
+/** 修改队列信息：第一步通过队列ID获取队列信息，渲染到修改界面；第二部修改信息提交。*/
+/** 第一步获取队列信息 */
 +(NSString *)GetGroupInfoByID;
-/** 第二步修改号群信息，并提交 */
+/** 第二步修改队列信息，并提交 */
 +(NSString *)EditGroupInfoEx;
 
-/** 判断号群是否被当前用户收藏 */
+/** 判断队列是否被当前用户收藏 */
 +(NSString *)GetCollectionInfoByGroupId;
-/** 收藏号群 */
+/** 收藏队列 */
 +(NSString *)AddCollectionInfo;
 /** 取消收藏 */
 +(NSString *)DelCollectionInfo;
@@ -79,7 +79,7 @@
 
 + (NSString *)MobileGetQueueDataByGroupId;
 
-/** 首页---景区等 进入号群详情 */
+/** 首页---景区等 进入队列详情 */
 + (NSString *)GetScreenDataDetailByGroupId;
 
 /** 修改列表中第一条数据的状态为办理中，并记录办理窗口。 */
@@ -194,11 +194,11 @@
 +(NSString *)GetScreenDataByGroupId;
 /** 评论信息 */
 +(NSString *)GetGroupCommentByGroupId;
-/** 加入号群 */
+/** 加入队列 */
 +(NSString *)AddQueueInfo;
-/** 带套餐 加入号群 */
+/** 带套餐 加入队列 */
 +(NSString *)PackageQueue;
-/** 号群信息 */
+/** 队列信息 */
 +(NSString *)MobileGetGroupInfoByGroupId;
 /** 结束排号（退出排号） */
 +(NSString *)ExitQueueEx;
@@ -211,7 +211,7 @@
 /** 我的排队详情 */
 +(NSString *)MobileGetQueueDetailed;
 #pragma mark - 套餐
-/** 加入套餐页面获取套餐信息（通过号群ID获取套餐信息） */
+/** 加入套餐页面获取套餐信息（通过队列ID获取套餐信息） */
 +(NSString *)GetPackageLists;
 /** 获取用户套餐信息 */
 +(NSString *)GetGroupPackageByUserId;
@@ -225,6 +225,6 @@
 +(NSString *)EditGroupPackage;
 /** 套餐进度 */
 +(NSString *)MobileGetPackageSchedule;
-/** 判断套餐中号群是否有的已经排队 */
+/** 判断套餐中队列是否有的已经排队 */
 +(NSString *)CheckPackage;
 @end
