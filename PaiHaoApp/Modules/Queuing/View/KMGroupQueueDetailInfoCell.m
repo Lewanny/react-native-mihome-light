@@ -87,7 +87,7 @@
         return UITableViewAutomaticDimension;
 //       return AdaptedHeight(214 + 104 + 104 + 120 + 140);
     }
-    return AdaptedHeight(214 + 104 + 104 + 120);
+    return AdaptedHeight(214 + 104 + 104 + 120 -104);
 }
 
 -(void)createComboView{
