@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="KMHomePagePaiHaoHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfk-fF-Gxr">
+                    <rect key="frame" x="0.0" y="0.0" width="106.5" height="50"/>
+                    <state key="normal" title="推荐号群" image="tuij">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="tuijl(1)"/>
+                    <state key="highlighted" image="tuijl(1)"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EfY-KQ-C12">
+                    <rect key="frame" x="106.5" y="0.0" width="106.5" height="50"/>
+                    <state key="normal" title="我的排号" image="paihao_">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="paihaolanse_"/>
+                    <state key="highlighted" image="paihaolanse_"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKr-3X-M01">
+                    <rect key="frame" x="213" y="0.0" width="107" height="50"/>
+                    <state key="normal" title="查看历史" image="lsjvv">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="lsjl"/>
+                    <state key="highlighted" image="lsjl"/>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCC-lW-H33">
+                    <rect key="frame" x="148" y="47" width="35" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="0.6486515410958904" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="EfY-KQ-C12" firstAttribute="leading" secondItem="Bfk-fF-Gxr" secondAttribute="trailing" id="31u-6m-p44"/>
+                <constraint firstItem="EfY-KQ-C12" firstAttribute="leading" secondItem="Bfk-fF-Gxr" secondAttribute="trailing" id="35W-M7-8Pj"/>
+                <constraint firstAttribute="bottom" secondItem="gKr-3X-M01" secondAttribute="bottom" id="650-2a-C6g"/>
+                <constraint firstItem="EfY-KQ-C12" firstAttribute="width" secondItem="gKr-3X-M01" secondAttribute="width" id="E2n-QC-zCI"/>
+                <constraint firstItem="Bfk-fF-Gxr" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="MCp-Ij-n2T"/>
+                <constraint firstAttribute="bottom" secondItem="Bfk-fF-Gxr" secondAttribute="bottom" id="Tlz-mp-sRm"/>
+                <constraint firstAttribute="bottom" secondItem="EfY-KQ-C12" secondAttribute="bottom" id="UQP-MK-8K3"/>
+                <constraint firstItem="EfY-KQ-C12" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="ajb-jA-g7P"/>
+                <constraint firstItem="gKr-3X-M01" firstAttribute="leading" secondItem="EfY-KQ-C12" secondAttribute="trailing" id="qXk-VL-3T6"/>
+                <constraint firstItem="Bfk-fF-Gxr" firstAttribute="width" secondItem="EfY-KQ-C12" secondAttribute="width" id="rpI-hv-Dd5"/>
+                <constraint firstItem="gKr-3X-M01" firstAttribute="leading" secondItem="EfY-KQ-C12" secondAttribute="trailing" id="siZ-cE-ZWs"/>
+                <constraint firstItem="gKr-3X-M01" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="whT-0h-Pm0"/>
+                <constraint firstAttribute="trailing" secondItem="gKr-3X-M01" secondAttribute="trailing" id="wvi-k9-90j"/>
+                <constraint firstItem="Bfk-fF-Gxr" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="zaW-NH-IkG"/>
+            </constraints>
+            <connections>
+                <outlet property="historyBtn" destination="gKr-3X-M01" id="Ajx-UM-N1t"/>
+                <outlet property="lineView" destination="DCC-lW-H33" id="Zwe-ae-Asl"/>
+                <outlet property="mineBtn" destination="EfY-KQ-C12" id="fbg-Xz-DHW"/>
+                <outlet property="recommendBtn" destination="Bfk-fF-Gxr" id="wVe-Pl-7ht"/>
+            </connections>
+            <point key="canvasLocation" x="8" y="43"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="lsjl" width="15" height="15"/>
+        <image name="lsjvv" width="15" height="15"/>
+        <image name="paihao_" width="15" height="15"/>
+        <image name="paihaolanse_" width="15" height="15"/>
+        <image name="tuij" width="15" height="15"/>
+        <image name="tuijl(1)" width="15" height="15"/>
+    </resources>
+</document>

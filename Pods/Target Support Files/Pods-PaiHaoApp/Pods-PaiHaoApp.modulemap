@@ -1,0 +1,6 @@
+framework module Pods_PaiHaoApp {
+  umbrella header "Pods-PaiHaoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

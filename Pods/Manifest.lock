@@ -1,0 +1,136 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.2.0)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - CocoaLumberjack (3.2.1):
+    - CocoaLumberjack/Default (= 3.2.1)
+    - CocoaLumberjack/Extensions (= 3.2.1)
+  - CocoaLumberjack/Default (3.2.1)
+  - CocoaLumberjack/Extensions (3.2.1):
+    - CocoaLumberjack/Default
+  - CYLTabBarController (1.13.2)
+  - DZNEmptyDataSet (1.8.1)
+  - FDFullscreenPopGesture (1.1)
+  - IQKeyboardManager (4.0.13)
+  - JCore (1.1.5)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
+  - LBXScan (2.2):
+    - LBXScan/All (= 2.2)
+  - LBXScan/All (2.2):
+    - LBXScan/Types (~> 2.2)
+    - ZBarSDK (~> 1.3.1)
+  - LBXScan/Types (2.2)
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
+  - ReactiveObjC (3.0.0)
+  - RTRootNavigationController (0.6.3):
+    - RTRootNavigationController/Core (= 0.6.3)
+  - RTRootNavigationController/Core (0.6.3)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
+  - TZImagePickerController (1.9.2)
+  - UMengUShare/Core (6.4.5):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.5)
+  - UMengUShare/Social/Email (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedQQ (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/Social/SMS (6.4.5):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.4.5):
+    - UMengUShare/Core
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+  - ZBarSDK (1.3.1)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - AFNetworking
+  - CocoaLumberjack
+  - CYLTabBarController
+  - DZNEmptyDataSet
+  - FDFullscreenPopGesture
+  - IQKeyboardManager
+  - JPush
+  - LBXScan (~> 2.2)
+  - Masonry
+  - MJRefresh
+  - ReactiveObjC
+  - RTRootNavigationController
+  - SDWebImage
+  - TZImagePickerController
+  - UMengUShare/Social/Email
+  - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/Social/SMS
+  - UMengUShare/UI
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ActionSheetPicker-3.0
+    - AFNetworking
+    - CocoaLumberjack
+    - CYLTabBarController
+    - DZNEmptyDataSet
+    - FDFullscreenPopGesture
+    - IQKeyboardManager
+    - JCore
+    - JPush
+    - LBXScan
+    - Masonry
+    - MJRefresh
+    - ReactiveObjC
+    - RTRootNavigationController
+    - SDWebImage
+    - TZImagePickerController
+    - UMengUShare
+    - YYKit
+    - ZBarSDK
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: d11a4c12c6aaf704b8a3f56d179198c99f3e41e6
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
+  CYLTabBarController: 1ea13266ead94d45427c9d7ff8fa6e06d6835d23
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  IQKeyboardManager: 8eab4d8111418414619d1df8e4779ce5d0f8d7e2
+  JCore: 9bd9c770c877c583d98b90a68792b8361974c231
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
+  LBXScan: 31b69c9657404133324e6b68ef814802ef9cacc0
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  RTRootNavigationController: 09e3a113feecf21c194a83ad6755f5f319723c54
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
+  TZImagePickerController: 308ff153f72969de772ffd1b7901b07c9eac68c1
+  UMengUShare: a5711c54e640b04e3048e931d2b88d50f9cfa55c
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
+
+PODFILE CHECKSUM: c436c4a2982d955d3b7be2de324dbedd54db31ab
+
+COCOAPODS: 1.5.0

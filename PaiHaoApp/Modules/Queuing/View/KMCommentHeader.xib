@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KMCommentHeader"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KMCommentHeader">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="118"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youjt" translatesAutoresizingMaskIntoConstraints="NO" id="am1-Hj-Six">
+                    <rect key="frame" x="355" y="10" width="10" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Ywa-Oc-OPb"/>
+                        <constraint firstAttribute="width" constant="10" id="wQB-Qi-NhI"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ2-LD-lvH">
+                    <rect key="frame" x="270" y="5" width="80" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="FBj-kt-uvN"/>
+                        <constraint firstAttribute="width" constant="80" id="mOA-gS-JcW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="我也要评价">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户评价（999）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJU-IJ-Pz7">
+                    <rect key="frame" x="10" y="5" width="112" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbd-Rq-a22">
+                    <rect key="frame" x="10" y="45" width="39.5" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="saK-rc-2WT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="综合评分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHx-2e-RXe">
+                    <rect key="frame" x="57.5" y="45" width="58" height="25"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oag-kV-fAn" customClass="HCSStarRatingView">
+                    <rect key="frame" x="57.5" y="70" width="100" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Ugb-G1-s6c"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="value">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="emptyStarImage" value="xingb2"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="filledStarImage" value="xingb1"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好评率80%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gy-xk-mPy">
+                    <rect key="frame" x="167.5" y="45" width="76.5" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6k-1t-2ZN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="lB1-Qo-gJr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EHx-2e-RXe" firstAttribute="top" secondItem="Bbd-Rq-a22" secondAttribute="top" id="4yD-AH-QQH"/>
+                <constraint firstItem="Oag-kV-fAn" firstAttribute="height" secondItem="Bbd-Rq-a22" secondAttribute="height" multiplier="1:2" id="BxE-E2-E6u"/>
+                <constraint firstItem="fJU-IJ-Pz7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="Cwy-eI-1cj"/>
+                <constraint firstItem="Bbd-Rq-a22" firstAttribute="leading" secondItem="fJU-IJ-Pz7" secondAttribute="leading" id="HRN-8X-JY0"/>
+                <constraint firstAttribute="trailing" secondItem="D6k-1t-2ZN" secondAttribute="trailing" id="HSd-eE-pjW"/>
+                <constraint firstItem="Oag-kV-fAn" firstAttribute="bottom" secondItem="Bbd-Rq-a22" secondAttribute="bottom" id="I59-sB-OLN"/>
+                <constraint firstItem="3gy-xk-mPy" firstAttribute="leading" secondItem="Oag-kV-fAn" secondAttribute="trailing" constant="10" id="Ivu-GL-Cq5"/>
+                <constraint firstItem="D6k-1t-2ZN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JwW-Lx-LfD"/>
+                <constraint firstItem="Oag-kV-fAn" firstAttribute="leading" secondItem="Bbd-Rq-a22" secondAttribute="trailing" constant="8" id="Pic-9L-ksT"/>
+                <constraint firstItem="am1-Hj-Six" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="VNc-d7-kOt"/>
+                <constraint firstItem="EHx-2e-RXe" firstAttribute="leading" secondItem="Bbd-Rq-a22" secondAttribute="trailing" constant="8" id="XR0-mG-3ae"/>
+                <constraint firstItem="pZ2-LD-lvH" firstAttribute="centerY" secondItem="am1-Hj-Six" secondAttribute="centerY" id="XUv-aB-v7y"/>
+                <constraint firstItem="3gy-xk-mPy" firstAttribute="top" secondItem="Bbd-Rq-a22" secondAttribute="top" id="fAq-Y7-y9y"/>
+                <constraint firstAttribute="trailing" secondItem="am1-Hj-Six" secondAttribute="trailing" constant="10" id="fgm-i1-Doz"/>
+                <constraint firstItem="D6k-1t-2ZN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gGs-yM-IKN"/>
+                <constraint firstItem="fJU-IJ-Pz7" firstAttribute="centerY" secondItem="pZ2-LD-lvH" secondAttribute="centerY" id="geh-S8-gQK"/>
+                <constraint firstItem="EHx-2e-RXe" firstAttribute="height" secondItem="Bbd-Rq-a22" secondAttribute="height" multiplier="1:2" id="i60-t3-qW5"/>
+                <constraint firstItem="Bbd-Rq-a22" firstAttribute="top" secondItem="fJU-IJ-Pz7" secondAttribute="bottom" constant="10" id="j0K-nv-yeo"/>
+                <constraint firstItem="am1-Hj-Six" firstAttribute="leading" secondItem="pZ2-LD-lvH" secondAttribute="trailing" constant="5" id="jLi-jd-0Gg"/>
+                <constraint firstItem="fJU-IJ-Pz7" firstAttribute="height" secondItem="pZ2-LD-lvH" secondAttribute="height" id="wek-HW-2p7"/>
+                <constraint firstItem="3gy-xk-mPy" firstAttribute="bottom" secondItem="Bbd-Rq-a22" secondAttribute="bottom" id="xoC-yD-qbh"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="arrow" destination="am1-Hj-Six" id="s17-40-BCb"/>
+                <outlet property="arrowRight" destination="fgm-i1-Doz" id="BgU-cO-Q74"/>
+                <outlet property="arrowTop" destination="VNc-d7-kOt" id="Jmj-cd-Ig1"/>
+                <outlet property="averageTextLbl" destination="EHx-2e-RXe" id="eM1-Tt-PHp"/>
+                <outlet property="commentBtn" destination="pZ2-LD-lvH" id="uR8-UU-JuE"/>
+                <outlet property="commentNumLbl" destination="fJU-IJ-Pz7" id="wyr-U8-4ue"/>
+                <outlet property="commentNumLeft" destination="Cwy-eI-1cj" id="uGH-hb-Wa9"/>
+                <outlet property="rateLbl" destination="3gy-xk-mPy" id="8FX-A0-QRb"/>
+                <outlet property="scoreLbl" destination="Bbd-Rq-a22" id="9GN-6k-1qo"/>
+                <outlet property="starView" destination="Oag-kV-fAn" id="L6j-g2-Iz9"/>
+            </connections>
+            <point key="canvasLocation" x="-5.5" y="-255"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="xingb1" width="31" height="28"/>
+        <image name="xingb2" width="31" height="28"/>
+        <image name="youjt" width="8" height="15"/>
+    </resources>
+</document>

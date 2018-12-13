@@ -1,0 +1,112 @@
+//
+//  KMPrefixHeader.pch
+//  PaiHaoApp
+//
+//  Created by KM on 2017/7/17.
+//  Copyright © 2017年 KM. All rights reserved.
+//
+
+#ifndef KMPrefixHeader_pch
+#define KMPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - Pod 库
+//网络请求
+#import <AFNetworking/AFNetworking.h>
+//网络图片加载
+#import <SDWebImage/UIImageView+WebCache.h>
+//AutoLayout
+#import <Masonry/Masonry.h>
+//上下拉刷新
+#import <MJRefresh/MJRefresh.h>
+//YY Kit
+#import <YYKit/YYKit.h>
+
+//键盘管理
+#import <IQKeyboardManager/IQKeyboardManager.h>
+//列表无数据处理
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+//RAC OC版
+#import <ReactiveObjC/ReactiveObjC.h>
+//导航栏过渡
+//#import <JZNavigationExtension/JZNavigationExtension.h>
+//pop手势管理
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
+//相册图片选择
+#import <TZImagePickerController/TZImagePickerController.h>
+//TabBarCtr
+#import <CYLTabBarController/CYLTabBarController.h>
+//Log
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <CocoaLumberjack/DDLog.h>
+
+
+#pragma mark - 第三方
+//HUD
+#import "SVProgressHUD.h"
+//UIPlaceHolderTextView
+#import "UIPlaceHolderTextView.h"
+//Alert 封装
+#import "LBXAlertAction.h"
+//轮播图
+#import "SDCycleScrollView.h"
+
+#pragma mark - 基础类
+#import "AppDelegate.h"
+#import "AppDelegate+KM_AppService.h"
+
+#import "KMBaseNavigationController.h"
+#import "KMBaseViewController.h"
+#import "KMBaseViewModel.h"
+#import "KMBaseTableViewCell.h"
+#import "KMBaseCollectionViewCell.h"
+#import "KMBaseCollectionReusableView.h"
+
+/** 常用 */
+#import "KMLoginViewController.h"
+#import "KMQRCodeVC.h"
+
+#pragma mark - Tools
+#import "KMUserManager.h"
+#import "KMLocationManager.h"
+#import "KMTool.h"
+
+#pragma mark - 自定义控件
+#import "KMBasePaiHaoCell.h"
+#import "KMBasePaiHaoTableViewCell.h"
+
+#pragma mark - Model
+#import "KM_ModelHeader.h"
+
+#pragma mark - 宏定义
+#import "KM_UtilsMacors.h"
+#import "KM_NotificationMacors.h"
+#import "KM_FontMacors.h"
+#import "KM_ColorMacors.h"
+
+#pragma mark - 枚举
+#import "KM_EnumerateHeader.h"
+
+#pragma mark - 常量
+#import "KM_Const.h"
+#import "KM_StoryboardConst.h"
+
+#pragma mark - Category
+#import "KM_CategoryHeader.h"
+
+#pragma mark - 网络Api
+#import "KM_NetworkApi.h"
+#import "KM_NetworkActionName.h"
+#import "KM_NetworkParams.h"
+#import "KM_NetworkClient.h"
+#import "KM_NetworkConfig.h"
+
+
+#define LBXScan_Define_Native  //包含native库
+#define LBXScan_Define_ZXing   //包含ZXing库
+#define LBXScan_Define_ZBar   //包含ZBar库
+#define LBXScan_Define_UI     //包含界面库
+
+#endif /* KMPrefixHeader_pch */
