@@ -227,6 +227,7 @@
     [self layoutIfNeeded];
     
     [_iconImg setRoundedCorners:UIRectCornerAllCorners radius:AdaptedWidth(8)];
+    _iconImg.userInteractionEnabled = YES;
     [_queueNowBtn setRoundedCorners:UIRectCornerAllCorners radius:AdaptedWidth(5)];
 }
 
@@ -320,6 +321,14 @@
         [self.setTimeSubject sendNext:self.timeTextLbl];
     }];
     
+    // 点击图片查看大图
+    
+    [_iconImg addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+        @strongify(self)
+        [self.iconSubject sendNext:self.iconImg.image];
+    }];
+    
+    
     [[_queueNowBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self)
         [self.queueNowSubject sendNext:nil];
@@ -345,6 +354,15 @@
     }
     return _setTimeSubject;
 }
+
+
+-(RACSubject *)iconSubject{
+    if (!_iconSubject) {
+        _iconSubject                  = [RACSubject subject];
+    }
+    return _iconSubject;
+}
+
 
 -(RACSubject *)queueNowSubject{
     if (!_queueNowSubject) {

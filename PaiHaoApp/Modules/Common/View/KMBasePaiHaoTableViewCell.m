@@ -191,7 +191,8 @@
         [_distanceLabel setText:distance];
         [_timeLabel setText:model.startwaittime];
         [_IDLabel setText:NSStringFormat(@"ID:%@",model.groupno)];
-        [_statusLabel setAttributedText: [self setupStatusWithWaitNum:model.waitcount waitTime:model.waittime]];
+//        [_statusLabel setAttributedText: [self setupStatusWithWaitNum:model.waitcount waitTime:model.waittime]];
+        [_statusLabel setText:model.groupaddr];
     }else if ([data isKindOfClass:[KMQueueInfo class]]){
     KMQueueInfo *info               = data;
         [_nameLabel setText:info.groupname];

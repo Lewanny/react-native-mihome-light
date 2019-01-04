@@ -25,6 +25,9 @@
 /** 点击 地图 */
 @property (nonatomic, strong) RACSubject * mapSubject;
 
+/** 点击 图片 */
+@property (nonatomic, strong) RACSubject * iconSubject;
+
 +(CGFloat)cellHeightWithCombo:(BOOL)combo;
 
 @end

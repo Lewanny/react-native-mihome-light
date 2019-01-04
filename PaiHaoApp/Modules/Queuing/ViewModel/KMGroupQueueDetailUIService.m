@@ -18,6 +18,9 @@
 
 @property (nonatomic, strong) KMGroupQueueDetailVM * viewModel;
 
+@property (strong, nonatomic) UIView *backView;
+@property (strong, nonatomic) UIImageView *actionImageView;
+
 @end
 
 @implementation KMGroupQueueDetailUIService
@@ -117,8 +120,50 @@
         
         
     }];
+    
+    
+    //点击查看大图
+    [[cell.iconSubject takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        UIImage *imageSel = (UIImage *)x;
+        
+        NSLog(@"get image : %@", imageSel);
+        
+//        imageSel.hidden = YES;
+        _backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+        _backView.backgroundColor = [UIColor blackColor];
+        [_backView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backTapAction)]];
+        [[UIApplication sharedApplication].delegate.window addSubview:_backView];
+        
+        _actionImageView = [[UIImageView alloc] initWithImage:imageSel];
+        _actionImageView.frame = CGRectMake(0, 0, 80, 80);
+        [[UIApplication sharedApplication].delegate.window addSubview:_actionImageView];
+        [UIView animateWithDuration:.3 animations:^{
+            CGFloat fixelW = CGImageGetWidth(_actionImageView.image.CGImage);
+            CGFloat fixelH = CGImageGetHeight(_actionImageView.image.CGImage);
+            _actionImageView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, fixelH * [UIScreen mainScreen].bounds.size.width / fixelW);
+            _actionImageView.center = _backView.center;
+        }];
+    }];
+    
+    
     return cell;
 }
+
+- (void)backTapAction{
+    [_backView removeFromSuperview];
+    [_actionImageView removeFromSuperview];
+//    [UIView animateWithDuration:.2 animations:^{
+//        _actionImageView.frame = CGRectMake(0, 0, 80, 80);
+//        _backView.alpha = .3;
+//    } completion:^(BOOL finished) {
+//        [_backView removeFromSuperview];
+//        [_actionImageView removeFromSuperview];
+////        self.hidden = NO;
+//    }];
+}
+
+
 
 /**
  排队信息 Cell

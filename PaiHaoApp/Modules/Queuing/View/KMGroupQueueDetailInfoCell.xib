@@ -218,7 +218,7 @@
                 <outlet property="groupInfoBGHeight" destination="dG5-6O-1eu" id="Tba-4d-mJg"/>
                 <outlet property="groupInfoLine" destination="EaB-Sf-wH1" id="5R6-cY-7XI"/>
                 <outlet property="iconBottom" destination="Uvd-uz-NoO" id="fXH-sI-AZt"/>
-                <outlet property="iconImg" destination="chn-8j-qQY" id="y1X-7j-LeO"/>
+                <outlet property="iconImg" destination="chn-8j-qQY" id="WFu-H0-ySj"/>
                 <outlet property="iconLeft" destination="hEc-zn-NSa" id="fWR-XZ-EiN"/>
                 <outlet property="iconTop" destination="3eh-4m-kcj" id="LQz-hj-73w"/>
                 <outlet property="labelRight" destination="IUe-hp-euj" id="JBa-50-hgJ"/>
